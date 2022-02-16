@@ -1,0 +1,87 @@
+aside{
+    position:relative;
+    top: 200px;
+    text-align: center;
+}
+div{
+    width:100;
+    height: 70;
+    padding-bottom: 25px;
+    font-size:xx-large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#desc{
+    position:absolute;
+    top:380px;
+    left:700px;
+    text-align: left;
+}
+
+#short_field{
+    line-height: 50px;
+    font-size: xx-large;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#long_field{
+    line-height: 50px;
+    width : 830px;
+    font-size: xx-large;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#agree_label{
+    font-size: large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span{
+    font-size: large;
+    font-weight: lighter;
+}
+
+#register{
+    background-color: cornflowerblue;
+    color:aliceblue;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+#t_c{
+    color:cornflowerblue;
+}
+
+#reg_button{
+    background-color: cornflowerblue;
+    color: aliceblue;
+    line-height: 50px;
+    font-size: xx-large;
+    width: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+
+}
+
+#sign_button{
+    background-color: rgb(103, 231, 86);
+    color: aliceblue;
+    line-height: 50px;
+    font-size: xx-large;
+    width: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+#agree{
+    position:absolute;
+    top:390px;
+    left:300px;
+}
