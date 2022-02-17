@@ -1,0 +1,94 @@
+.input-container h1{
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+#name1, #name2, #password{
+    width: 200px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+#phone, #email{
+    width: 405px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+form{
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.agree-container{
+    text-align: left !important;
+}
+
+.agree-container a{
+    color: #5ec3f1;
+}
+
+.agree-container a:hover{
+    color: #008BCA;
+}
+
+.button-container{
+    display: inline-block;
+}
+
+.register-btn{
+    display: inline-block;
+    background-color: #008BCA;
+    padding: 15px 77px;
+    border-radius: 3px;
+    color: #FFFFFF;
+}
+
+.register-btn:hover{
+    background-color: #5ec3f1;
+}
+
+.signin-btn{
+    display: inline-block;
+    background-color: #4CAF50;
+    padding: 15px 77px;
+    border-radius: 3px;
+    color: #FFFFFF;
+}
+
+.signin-btn:hover{
+    background-color: #7dca00;
+}
+
+#register-txt{
+    background-color: #008BCA;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width:411px){
+
+    #name1, #name2, #password{
+        width: 205px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+   #phone, #email{
+        width: 205px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+}
