@@ -1,0 +1,43 @@
+
+.nameEl{
+    flex-direction: column;
+    margin-bottom:  5px;
+    }
+
+ .contactEl{
+     margin-bottom: 5px;
+    
+ }
+
+ #numberEl{
+     margin-bottom: 5px;
+    
+ }
+ .authEl{
+     margin-bottom: 5px;
+ }
+
+
+.registerEl{
+    background-color: blue;
+    color: white;
+    padding: 7px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 6px ;
+    
+}
+.signInEl{
+    background-color: green;
+    color: white;
+    padding: 7px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 6px ;
+    
+}
+
