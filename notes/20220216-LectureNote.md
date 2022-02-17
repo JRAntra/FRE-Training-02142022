@@ -1,58 +1,83 @@
-*How many ways to apply the css file?*
+# CSS Concepts
 
-1. Style tag: Use the style tag
-2. External style sheet: Import using link tag
-3. Inline attribute: You can use the style attribute from an html tag.
+1. 3 ways to implement CSS rules
+   - External style sheet
+   - Using style tag
+   - Using inline attribute
+     - Priority
+     - Specificity
+2. Pseudo class vs. Pseudo elements
+3. CSS reset vs CSS normalization
+   - CSS box model
+   - box-sizing
+4. Common CSS selectors
+   - class
+   - id
+   - element
+   - universal selector
+   - attribute selector: Regex can be used
+   - Descendent selector vs. child selector/combinator
+5. Margin collapsing
+6. CSS positions (positioned elements)
+   - static
+   - relative
+   - absolute (normal document flow)
+   - fixed
+   - sticky
+   - inherit
+7. z-index
+8. Flexbox
+9. CSS grid
 
+# Explore CSS concepts
 
-```styles.css
-div {
-    width: 100%;
-    height: 100px;
-    background-color: red;
-}
+## 1. 3 ways to implement CSS rules
+*What are 3 ways to implement CSS rules?*
+
+1. External style sheet
+```html
+/* After creating an file calle style.css, whcih include styles*/
+<link rel="stylesheet" href="style.css">
 ```
-
+2. Using style tag
 ```html
 <style>
-    div {
-        width: 100%;
-        height: 100px;
-        background-color: red;
+    body {
+        background-color: #f0f0f0;
     }
 </style>
 ```
-
-*What if you are applying different ways to implement css at the same time?*
-
-- One will override others. 
-*Which one has more priority?*
-- Priority:
-    1. Inline: most specific.
-    2. Whatever comes at top:
-    External
-    Style tag
-- Specificity: the more specific the css, the higher the priority.
-*WARNING: Inline is not recommended because it makes your code hard to maintain. It will override other styles.*
-
+3. Using inline attribute
+```html
+<body style="background-color: #f0f0f0">
+```
+*If all the styles were included, which style gets executed first?*
+- The ones with the most *specificity* has the highest priority which is an inline attribute.
 *What is specificity?*
-- specificity means the more specific the css, the higher the priority.
+- The specificity of a style is determined by the number of classes, id and element name.
 
-*Psedo Element vs Psedo calss?*
+- Then, the ones that were written first starting from the top of the document will be executed.
 
+*Order of execution:*
+1. inline attribute
+2. style tag or external style sheet depending on which one was executed first.
+*WARNING1: however, ones that gets executed first will probably be overrided which means it will not take effect.*
 
-MDN Web Docs: 
+*WARNING2: inline is not recommended because it makes your code hard to maintain. It will override other styles.*
 
+2. Pseudo class vs. Pseudo elements
+Reference:
+
+MDN Docs:
 https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
-
 https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 
 - A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element(s). For example, `::first-line` can be used to change the font of the first line of a paragraph.
 
 - A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). For example, `:hover` can be used to change a button's color when the user's pointer hovers over it.
 
-ex 1: pseudo element hover.
-```js
+ex: pseudo element hover
+```css
 div {
     color: red;
 }
@@ -61,13 +86,18 @@ div:hover{
     background-color: aqua;
 }
 
+/* Modify the text or content*/
 p::before {
     content: 'This is a new element--';
 }
 p::after {
     content: '--and this is the end.';
 }
+```
 
+3. CSS reset vs CSS normalization
+*How do you reset CSS?*
+```css
 /* CSS Reset*/
 *, 
 *::before, 
@@ -75,149 +105,147 @@ p::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}   
+} 
 ```
+- We use before and after because pesudo elements are not included with `*` (universal CSS).
 
-- pseudo element: added more to the p tag. 
+*Why do we reset CSS?*
+-  If we inspect from Developer Mode, different browsers may have different CSS rules. These rules can be referred to as user agent stylesheets.
 
-3. CSS Reset 
+*What is user aagent stylesheets?*
+- User agent stylesheets are the stylesheets that are applied to the HTML elements by the browser.
 
-- Different browser may have different CSS rules. If we inspect. Therefore, you need to reset the CSS so that everything may start from 0.
-
-- In order to avoid cross-device compatibility issues, you should always reset the CSS.
-
-*Wha tis user agent: stylesheet?*
-- something that is being applied by the browser. 
-- For the universal CSS, it does not include psedo elements. Therefore, we need to add ::before, and after to the universal CSS.
-
-*What is box-sizing?*
-- The box-sizing CSS property sets how the total width and height of an element is calculated.
-
-*CSS box-model?*
-- By default in the CSS box model, the width and height you assign to an element is applied only to the element's content box. If the element has any border or padding, this is then added to the width and height to arrive at the size of the box that's rendered on the screen. This means that when you set width and height, you have to adjust the value you give to allow for any border or padding that may be added.
-
-- CSS basic box model shows how the width and height is applied to a box. 
+- Therefore, you need to reset the CSS so that everything may start from 0, and no unnessary CSS rules will be included.
+- Also, In order to avoid cross-device compatibility issues, you should always reset the CSS.
+   - CSS box model
+   *What is box model?*
+    - Box model is the way that a browser determines the size and position of an element.
+   - By default in the CSS box model, the width and height you assign to an element is applied only to the element's content box. (margins, paddings and border will be added to the height and width)
+   - CSS basic box model shows how the width and height is applied to a box. 
     - Border edge
     - Margin edge
     - Padding edge
+   - box-sizing
+   *What is box-sizing?*
+    - Box-sizing is a CSS property that specifies how the width and height of an element are determined.
 
-*Tip: you can inspect the box model elements*
+    BitDegree: https://www.bitdegree.org/learn/css-box-sizing#:~:text=CSS%20border%2Dbox%20is%20the,borders%20fit%20in%20this%20number.
+    - CSS border-box is the most popular choice for setting box-sizing. It guarantees that the content box shrinks to make space for the padding and borders.
 
-ex 1: explore the box model.
+    - Therefore, if you set your element width to 200 pixels, border-box makes sure that the content, padding, and borders fit in this number.
+
+4. Common CSS selectors
+*What are common CSS selectors?*   
+   - class
+   ```css
+   .container {
+       width: 200px;
+       height: 200px;
+   }
+   ```
+   - id
+   ```css
+   #container {
+       width: 200px;
+       height: 200px;
+   }
+   ```
+   - element
+   ```css
+    p {
+         width: 200px;
+         height: 200px;
+    }
+   ```
+   - universal selector
+   ```css
+   * {
+         width: 200px;
+         height: 200px;
+    }
+   ```
+   - attribute selector: Regex can be used
+   ```css
+    [href^='http://'] {
+         color: red;
+    }
+    /* You can use regex to get or filter the specific value of an attribute.*/
+   ```
+   ex: select two elements 
+   ```css
+    .container, #container {
+         width: 200px;
+         height: 200px;
+    }
+   ```
+   *- root of the webpage will be HTML element.*
+   - Descendent selector vs. child selector/combinator
+   *Waht is descendent selector?*
+   - A descendent selector is a selector that matches all the descendants of the element that matches the selector.
+   ```css
+    .container > p {
+         color: red;
+    }
+   ```
+    *What is child selector?*
+    - A child selector is a selector that matches all the direct children of the element that matches the selector.
+    ```css
+    .container p {
+         color: red;
+    }
+    ```
+5. Margin collapsing
+- The top and bottom margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as margin collapsing.
+ex:
 ```css
-/* CSS will add width and hieght from the border, mragin, and padding*/
-div {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    margin: 10px;
-    padding: 10px;
+h1 {
+  margin: 0 0 50px 0;
 }
+
+h2 {
+  margin: 20px 0 0 0;
+}
+/*
+In the example above, the <h1> element has a bottom margin of 50px and the <h2> element has a top margin set to 20px.
+
+Common sense would seem to suggest that the vertical margin between the <h1> and the <h2> would be a total of 70px (50px + 20px). But due to margin collapse, the actual margin ends up being 50px.
+*/
 ```
-
-*If you want to avoid this, you use the box-sizing: content-box*
-
-*Please refer to the documentation below:*
-https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
-
-
-- CSS normalization
-*What is CSS normalization*
-- CSS normalization is a process that makes it easier to read and write CSS.
-- There are differnt ways to reset CSS rules. If you follow specific rules, it is called CSS normalization.
-
-- examples of CSS Selectors:
-```css
-/* Select by class*/
-.container {
-
-}
-
-```
-
-- Class selector is more specific so it will override the element selector.
-
-- inline > class > element (div{})
-
-- id selector.
-- attribute selecltor: 
-```css
-[attribute] {
-
-}
-div[class^='con'] {
-
-}
-```
-- select two element at the same time
-```css
-.container, .container2 {
-    /* CSS rules */
-}
-```
-
-- root of the webpage will be HTML element. 
-
-- You can use *descendent selector* to select only children from the parent. 
-
-- We also have a child combinator, which is used to select all children from the parent.
-
-*What is margin collapsing?*
-- The top and bottom margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as margin collapsing
-
-- Margin collapse will be applied; the bigger margin takes over the small margin
-https://www.w3schools.com/css/css_margin_collapse.asp
-
-*What is CSS position?*
-- static is the default position for all css positions. 
-
-
-*What is poisition element?*
-- static: It is not a poisition element.
-- relative: the current position will be the reference if you want to change something. 
-	*Change top and left?*
-	- moved top and left from the original place.
-- absoulte
-	*The moment you apply the absoulte, it shrunk the element.*
-	normal document folow need to know
-	*What is normal document flow?*
-	- way the block or the inline element is displayed on the page. 
-	- When you apply the absoulte, it will be out of the normal document flow. Pretend it is not there. 
-	- You need to set the offset if you want to move the (top and bottom)
-- fixed
-	- extract element from the normal document flow.
-	- An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. 
-	- viewport/browser window
-- sticky
-	- It will stick when the mouse is scrolled. 
-	An element with position: sticky; is positioned based on the user's scroll position.
-	- A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
-	- It will not be extracted from the normal document flow. 
-	- 
-	
-- inherit: position of the element is inherited.
-*When will you need to inherit?*
-- cascading - inherit.
-
-*What are practical uses?*
-
-- Navbar: fixed position.
-- Bootstrap carousel: slides - each slide is moved to its original place. 
-- 
-
+6. CSS positions (positioned elements)
+- The position property is used to position an element relative to its normal position.
+   - static: default position value; It is not a position element and it is not affected by the flow of the page.
+   - relative: It is a position element and it is affected by the flow of the page. It makes a reference to the current position of the element.
+   - absolute (normal document flow): 
+    *What is normal document flow?*
+    - The normal document flow is the flow of the page or the way the block or the inline element is displayed on the page.
+   *What happen with absolut position?*
+   - you are out of normal document flow, which means other element will not recognize this element.
+   *How do you implement absolute position?*
+   - you need an offset or set top and bottom to 0.
+   - fixed: 
+    *What is fixed position?*
+    - It is a position element and it is affected by the flow of the page. It makes a reference to the viewport/browser window.
+   - sticky
+    *What is sticky position?*
+    - - A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+    - while it is relative, it will not be extracted from the normal document flow.
+   - inherit: 
+    *What is inherit position?*
+    - inherit will inherit properties or cascade from the parent element.
+    *what is cascade?*
+    - The cascade is an algorithm that defines how to combine property values originating from different sources. 
+7. z-index
 *What is z-index?*
-- index that shows which one to override. 
+- z-index is a CSS property that specifies the stack order of an element.
+8. Flexbox
+*What is flexbox?*
+- Flexbox is a layout method that allows you to display items in a flexible manner. (one-dimensional layout)
+- You can make it into two dimensional by using nested divs.
+9. CSS grid
+*What is CSS grid?*
+- CSS Grid Layout excels at dividing a page into major regions or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives.
 
-*What is Flexbox?*
+- Like tables, grid layout enables an author to align elements into columns and rows. However, many more layouts are either possible or easier with CSS grid than they were with tables.
 
-- One dimensional because it only cares about a line.  
-- flex-wrap and flex-direction
+*WARNING: some browsers won't support CSS grid layout.*
 
-*What is grid?*
-- Becareful! Certain browser won't support CSS Grid. 
-- display: grid > no changes are not applied. 
-	- grid-template-columns: 1fr 1 fr 1fr;
-	- gap: 50px 100px; (row and column gaps)
-	
-*Homework?*
-- 
