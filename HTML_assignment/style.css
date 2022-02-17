@@ -1,0 +1,192 @@
+* {
+  /* border: 1px solid #000; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+form {
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1px;
+  max-width: 700px;
+}
+
+h3 {
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 800;
+  text-align: center;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+#mobile {
+  width: 100%;
+}
+
+#email {
+  width: 100%;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name input {
+  width: 50%;
+}
+
+#firstName {
+  margin-right: 20px;
+}
+
+#password {
+  margin-right: 20px;
+}
+
+.password {
+  display: flex;
+  justify-content: space-between;
+}
+
+.password input {
+  width: 50%;
+}
+
+.agree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agree .check {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 7px;
+}
+
+.agree label {
+  margin-right: 50px;
+  margin-left: 15px;
+  font-size: small;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+input {
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: solid 1px rgb(207, 204, 204);
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid rgb(66, 118, 231);
+  box-shadow: rgba(66, 118, 231, 0.4) 3px 3px 15px 0px;
+}
+
+small {
+  font-size: small;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 50px;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  border: transparent;
+}
+
+.registerbtn:hover {
+  background-color: rgb(164, 209, 216);
+  transition: 0.5s ease;
+}
+
+.registerbtn {
+  background-color: rgb(66, 118, 231);
+  margin-right: 20px;
+}
+
+.signinbtn:hover {
+  background-color: rgb(179, 236, 179);
+}
+
+.signinbtn {
+  background-color: rgb(44, 156, 44);
+}
+
+.littleRegister {
+  background-color: rgb(66, 118, 231);
+  border-radius: 5px;
+  color: white;
+  padding: 2px 5px;
+}
+
+a {
+  text-decoration: initial;
+  color: rgb(65, 198, 231);
+}
+
+@media screen and (max-width: 700px) {
+  .name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name input {
+    width: 100%;
+  }
+
+  #firstName {
+    margin-bottom: 15px;
+  }
+  .password {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .password input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .agree {
+    display: flex;
+    flex-direction: column;
+  }
+  .check {
+    display: flex;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    margin-bottom: 15px;
+  }
+}
