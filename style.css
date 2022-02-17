@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+div {
+    margin: 10%;
+    width: auto;
+    height: auto;
+    position: relative;
+    padding: 10%;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    width: 100%;
+}
+
+input[type=text], input[type=password], input[type=email],select {
+    width: 47%;
+    height: auto;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#fname, #pswd {
+    margin-right: 5%;
+}
+#email {
+    width: 100%;
+}
+#pnumber {
+    width: 100%
+}
+
+span {
+    padding: 4px 15px;
+    box-sizing: border-box;
+}
+/*button*/
+
+input[type = button], input[type = submit] {
+    height: 3em;
+    width: 49%;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 12px;
+}
+#register{ /*id*/
+    background-color: rgb(93, 125, 214);
+}
+
+#register:hover{
+    background-color: rgb(46, 85, 192);
+}
+
+#signin{ /*id*/
+    background-color: rgb(83, 204, 110);
+}
+
+#signin:hover{
+    background-color: rgb(13, 134, 67);
+}
+
+/*text*/
+#r1 {
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: rgb(93, 125, 214);
+}
