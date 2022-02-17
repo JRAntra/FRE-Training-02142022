@@ -1,0 +1,106 @@
+input {
+    height: 25px;
+    border-radius: 6px;
+    border-width: thin;
+    border-color: lightgrey;
+    margin-bottom: 5px;
+
+}
+
+form {
+    display: block;
+    margin-left: 30%;
+    margin-right: 30%;
+    max-width: 360px;
+    min-width: 150px;
+    font-family:sans-serif;
+    font-size: small;
+}
+
+
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 45% 45%;
+  column-gap: 10%;
+}
+
+.full {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+form input {
+    margin-top:  5px;
+    color: silver;
+}
+
+
+
+.checkbox {
+    display: block;
+    float: left;
+    margin-top: 9px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font:5px;
+
+}
+
+.checkboxR {
+    overflow: hidden;
+    max-height: 50px;
+    margin-top: 15px;
+}
+
+.reg {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.smallest {
+    color: deepskyblue;
+    background-color: white;
+    font-size: small;
+}
+
+#button {
+    background-color: dodgerblue;
+}
+
+#button2 {
+    background-color:limegreen;
+    color: white;
+}
+
+.wrapper button {
+    height: 30px;
+    border-radius: 6px;
+    border-width: thin;
+    border-color: lightgrey;
+    margin-top: 4px;
+}
+
+@media screen and (max-width: 769px) {
+    .agreements {
+      float: none;
+      display: inline-flex;
+      overflow: auto;
+    }
+
+    .wrapper {
+        display: grid;
+    grid-template-columns: 100%;     
+    }
+
+    .checkboxR {
+        overflow: scroll;
+    }
+  }

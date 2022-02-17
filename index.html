@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Sign Up</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+
+
+<body>
+
+<form>
+    <h1>Sign Up</h1>
+      <div class="wrapper">
+        <input type="text" id="firstName" name="lastName" required minlength="4" maxlength="8" size="10" value="First Name">
+        <input type="text" id="lastName" name="lastName" required minlength="4" maxlength="8" size="10" value="Last Name">
+      </div>
+        
+      <div class="full">
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required value="Mobile Number">
+      </div>
+      <div class="full">
+        <input type="email" id="email" pattern=".com" size="30" required value="Email Address" > 
+      </div>
+      <div class="wrapper">
+        <input type="text" id="password" name="password" minlength="8" required value="Password">
+        <input type="text" id="password" name="password" minlength="8" required value="Confirm Password">
+      </div>
+
+      <div class="agreements">
+         <div class="checkbox">
+            <input  type="checkbox" id="agreement" name="agreement" value="Agree">
+            <label  for="agreement">I Agree</label> 
+         </div>    
+                <div class="checkboxR"> 
+                    <small>By clicking <small class="reg">Register</small> you agree to the <small class="smallest">Terms and Conditions</small>  set out by this site, including our Cookie Use.</small>
+                </div>
+      </div>
+   
+      <div class="wrapper">
+        <button id="button" type="button">Register</button>
+        <button id="button2" type="button">Sign In</button>
+      </div>
+        
+
+</form>
+
+
+
+</body>
+</html>
