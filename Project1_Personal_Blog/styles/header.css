@@ -9,3 +9,7 @@
 .header__link {
   color: rgb(158, 158, 157);
 }
+
+.header__title {
+  text-decoration: underline;
+}
