@@ -1,0 +1,181 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+:root{
+    --shadow:#a6c8ff;
+    --links:#0040a8;
+    --text: 'Maven Pro', sans-serif;
+}
+
+body{
+    font-family:var(--text);
+}
+
+nav{
+    width:100vw;
+    padding:0.5em 0;
+    margin:0;
+}
+
+.nav__sec{
+    width:100%;
+    max-width:1500px;
+    padding:0.5em;
+    margin:0 auto;
+    display:flex;
+    flex-flow:row;
+}
+
+.title{
+    font-size:1.4em;    
+    text-align:center;
+    text-decoration:underline;
+}
+
+
+.sec__cont__nav{
+    width:50%;
+    margin:0 5px;
+    text-align:center;
+    padding:50px 0;
+}
+
+.nav__sec img{
+    height:20px;
+    
+}
+
+main{
+    width:80%;
+    max-width:1500px;
+    margin:0 auto;
+    padding:0;
+    z-index:0;
+}
+
+
+
+.main__sec{
+    width:100%;
+    max-width:1000px;
+    display:flex;
+    flex-direction:row;
+    
+    margin:0 auto;
+    padding:0;
+}
+
+.sec__tile{
+    width:100%;
+    padding:2em 0.5em;
+    margin:2em 0.5em;
+    box-shadow:1px 1px 5px var(--shadow);
+}
+
+.date{
+    color:grey;
+    font-style:italic;
+    font-size:13px;
+}
+
+.sec__tile h2{
+    font-size:3em;
+    font-weight:bolder;
+    padding:0.5em 0;
+}
+
+.sec__tile p{
+    padding:0.3em 0;
+    
+}
+
+.tile__link{
+    text-decoration:none;
+    color:blue;
+}
+
+footer{
+    width:100vw;
+    background-color:#ededed;
+    padding:0;
+    margin:0;
+    position:absolute;
+    bottom:0;
+    z-index:1000;
+}
+
+.footer__div--center{
+    width:50%;
+    max-width:500px;
+    margin:0 auto;
+    text-align:center;
+    padding:1.3em 0;
+}
+
+.footer__div--center p{
+    padding:0.4em 0;    
+}
+
+.h5--green{
+    color:green;
+}
+
+.h5--blue{
+    color:blue;
+}
+
+
+
+
+
