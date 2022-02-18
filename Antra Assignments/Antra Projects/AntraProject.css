@@ -66,12 +66,13 @@ nav{
     width:100vw;
     padding:0.5em 0;
     margin:0;
+    box-shadow:1px 1px 10px rgba(227, 227, 227, 0.5);
 }
 
 .nav__sec{
     width:100%;
     max-width:1500px;
-    padding:0.5em;
+    padding:0.5em 0;
     margin:0 auto;
     display:flex;
     flex-flow:row;
@@ -88,7 +89,10 @@ nav{
     width:50%;
     margin:0 5px;
     text-align:center;
-    padding:50px 0;
+    padding:0;
+    height:2em;
+    width:15em;
+    margin:0 auto;
 }
 
 .nav__sec img{
@@ -99,9 +103,11 @@ nav{
 main{
     width:80%;
     max-width:1500px;
-    margin:0 auto;
     padding:0;
-    z-index:0;
+    margin:5em auto;
+    background-color:rgba(227, 227, 227, 0.1);
+    border-radius:10px;
+    border:solid 2px var(--shadow);  
 }
 
 
@@ -112,11 +118,11 @@ main{
     display:flex;
     flex-direction:row;
     
-    margin:0 auto;
-    padding:0;
+    margin:0 auto;    
 }
 
 .sec__tile{
+    background-color:white;
     width:100%;
     padding:2em 0.5em;
     margin:2em 0.5em;
@@ -147,12 +153,12 @@ main{
 
 footer{
     width:100vw;
-    background-color:#ededed;
+    box-shadow:-1px -1px 10px rgba(227, 227, 227, 0.5);
     padding:0;
     margin:0;
+    
     position:absolute;
     bottom:0;
-    z-index:1000;
 }
 
 .footer__div--center{
@@ -160,7 +166,7 @@ footer{
     max-width:500px;
     margin:0 auto;
     text-align:center;
-    padding:1.3em 0;
+    padding:0.4em;
 }
 
 .footer__div--center p{
@@ -175,24 +181,33 @@ footer{
     color:blue;
 }
 
-@media (max-width:720px){
+@media (max-width:900px){
     .nav__sec{
         display:flex;
         flex-flow:column;
         width:100%;
-        padding:10px 0;
+        padding:0;
         margin:0;
-    }
+    }  
     
     .sec__cont__nav{
         margin:0 auto;
+        padding:0.4em 0;
+        height:3em;
         width:100%;
-        background-color:var(--shadow);
-        border:solid 1px blue;
+        border:0.5px solid lightslategrey;
     }
     
+    main{
+        width:100%;
+    }
     .main__sec{
         flex-flow:column;
+    }
+    
+    .sec__tile{
+        width:90%;
+        margin:1em auto;
     }
     
     footer{
