@@ -1,0 +1,139 @@
+:root {
+    --color-primary: #4285f4;
+    --color-primary-dark: #0d47a1;
+    --color-success: #00c851;
+    --color-success-dark: #007e33;
+    --color-grey: #e0e0e0;
+    --color-grey-dark: #757575;
+  }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.blog__article__container {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+
+}
+
+body {
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+/* Font Colors*/
+
+.font-color-gray {
+    color: #757575;
+}
+
+.font-color-blue {
+    color: #4285f4
+} 
+
+.font-color-green {
+    color: #00c851;
+}
+
+/* header*/
+
+.blog__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 20px 20px;
+
+}
+
+.blog__header--left {
+    
+    width: 15%; 
+}
+
+.blog__header--center {
+    width: 70%;
+}
+
+.blog__header--right {
+    
+    width: 15%;
+    text-align: right;
+}
+
+
+/* article*/
+
+
+.blog__articles__display {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.blog__articles__display > article {
+    padding: 20px;
+    border: 4px solid #e0e0e0;
+    width: 100%;
+}
+
+.blog__article__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.blog__article__container--text {
+    margin-bottom: 20px;
+}
+
+.blog__article--category {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 15px
+
+}
+
+.blog__article--title {
+
+}
+
+.blog__article--date {
+    color: var(--color-grey-dark);
+    margin-bottom: 10px;
+}
+
+.blog__article--description {
+
+}
+
+/* footer */
+
+.blog__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #f5f6fa; 
+    height: 9vh;
+}
+
+.blog__footer--text {
+    color: var(--color-grey-dark);
+}
+
+.blog__footer--link {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
