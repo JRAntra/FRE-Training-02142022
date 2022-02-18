@@ -1,0 +1,11 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.header__link {
+  color: rgb(158, 158, 157);
+}

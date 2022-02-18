@@ -1,0 +1,73 @@
+@import "./cards.css";
+@import "./footer.css";
+@import "./header.css";
+
+:root {
+  --card__category-blue: #3b4ace;
+  --card__linkColor-blue: #6484eb;
+  --card__border: #ebebebf5;
+  --footer: #bbb8b8f5;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  /* border: 1px solid blue; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 960px) {
+  /* .container {
+    display: flex;
+    justify-content: center;
+  } */
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .header__link {
+    font-size: small;
+  }
+  .header__icon {
+    font-size: small;
+  }
+  .header {
+    width: 100vw;
+  }
+
+  .cards__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .header__link {
+    font-size: smaller;
+  }
+  .header__icon {
+    font-size: smaller;
+  }
+  .card {
+    width: 300px;
+  }
+
+  footer {
+    font-size: small;
+  }
+}
