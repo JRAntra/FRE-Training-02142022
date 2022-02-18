@@ -1,0 +1,100 @@
+.container{
+    display:flex;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container > div{
+    height: 50px;
+}
+
+#blog_title{
+    text-align: center;
+    font-size: xx-large;
+    flex-grow: 4;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: 20px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+#subscribe{
+    flex-grow: 3;
+}
+
+#search{
+    text-align: right;
+    flex-grow: 3;
+}
+
+
+#blog_box{
+    height: 300px;
+    width: 100px;
+    flex-grow: 4.9;
+    box-shadow: 0 0 10px #5c6166;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+#empty{
+    height: 300px;
+    flex-grow: 0.2;
+}
+
+
+#world_tag{
+    color: blue;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+
+#design_tag{
+    color: green;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+
+
+#title_blog{
+    font-size: xx-large;
+    margin-left: 20px;
+    font-weight: bolder;
+}
+
+#date{
+    color:#5c6166;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+#blog_desc{
+    margin-left: 20px;
+    margin-bottom: 60px;
+}
+
+#blog_link{
+    color: blue;
+    font-weight: lighter;
+    margin-left: 20px;
+}
+
+
+#footer{
+    background-color: #dce7ec;
+    height: 100px;
+    text-align: center;
+    padding-top: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#link{
+    color: blue;
+    font-weight: lighter;
+}
