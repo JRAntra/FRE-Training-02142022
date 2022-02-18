@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-size: .9rem;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+/* Make horizontal Nav (li)*/
+
+
+li {
+    display: inline;
+    margin-right: 15px;
+  }
+
+/*Set Grid*/
+
+.gridtest {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    height: 100vh;
+}
+
+.gridtest div{
+
+
+}
+
+/* Navbar */
+
+.nav {
+    background-color: #000;
+    color: white;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem
+}
+
+/* Header */
+
+.header {
+    background-color: #c6bfbf;
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 2;
+    padding: 1rem 2rem;
+
+}
+
+.header > h1 {
+    margin-bottom: 10px;
+}
+
+/* Content */
+
+.content__one, .content__two, .content__three {
+    padding-top: .5rem;
+    padding-left: 2rem;
+}
+
+.content__one {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 7;
+}
+.content__two {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 7;
+}
+.content__three {
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 7;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #0b4d14; ;
+    color: white;
+    grid-column: 1 / span 3;
+    grid-row: 11 / span 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem
+}
