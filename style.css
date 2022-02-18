@@ -6,11 +6,10 @@
 }
 
 div {
-    margin: 10%;
     width: auto;
     height: auto;
     position: relative;
-    padding: 10%;
+    display: flex;
 }
 
 h1 {
@@ -19,11 +18,16 @@ h1 {
 
 form {
     text-align: center;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex:auto;
+    position: absolute;
+    top: 50%;
+    width: 60%;
+    margin: 0 auto;
 }
 
 input[type=text], input[type=password], input[type=email],select {
-    width: 47%;
     height: auto;
     padding: 12px 20px;
     margin: 8px 0px;
@@ -32,16 +36,14 @@ input[type=text], input[type=password], input[type=email],select {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
-#fname, #pswd {
-    margin-right: 5%;
+#name {
+    width: 50%;
 }
-#email {
+
+#txt {
     width: 100%;
 }
-#pnumber {
-    width: 100%
-}
+
 
 span {
     padding: 4px 15px;
