@@ -18,6 +18,7 @@ main {
   column-gap: 2rem;
   row-gap: 1rem;
   padding: 3rem;
+  margin-bottom: 3rem ;
 }
 
 .container--card {
