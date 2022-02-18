@@ -1,0 +1,55 @@
+@import "style2.css";
+@import "style3.css";
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    justify-content: center;
+    overflow: auto;
+}
+
+header{
+    display: inline-block;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.subscribe__link a{
+    color: rgb(167, 167, 167);
+}
+
+.subscribe__link{
+    width: 100%;
+}
+
+.search__icon{
+    width: 100%;
+    cursor: pointer;
+}
+
+.inner--header h1{
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+footer{
+    background-color: #e4e3e3;
+    position: relative;
+    bottom:0;
+    width: 100%;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.footer--text a{
+    text-align: center !important;
+}
