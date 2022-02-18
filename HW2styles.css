@@ -1,0 +1,44 @@
+#heading{
+    background-color: #000;
+    height: 40px;
+}
+
+#title{
+    background-color: #c6bfbf;
+    height: 180px;
+    color: #000;
+    padding-top: 30px;
+}
+
+#foot{
+    background-color: #0b4d14;
+    height: 40px;
+}
+
+#desc{
+    background-color: white;
+    height: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+
+#title_heading{
+    font-size: xx-large;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#button_head{
+    color:white;
+    background-color: #000;
+    border: none;
+    padding-top: 5px;
+}
+
+#button_foot{
+    color:white;
+    background-color: #0b4d14;
+    border: none;
+    padding-top: 5px; 
+}
