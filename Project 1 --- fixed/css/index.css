@@ -1,0 +1,47 @@
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  margin-top: -200px;
+}
+
+.main--hero>img {
+  width: 100vw;
+  height: auto;
+}
+
+.main--container {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 1rem;
+  padding: 3rem;
+}
+
+.container--card {
+  border: 6px solid lightgray;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    margin-top: -400px;
+  }
+
+  .main--container {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    padding: 3rem;
+    margin-bottom: 3rem ;
+  }
+}
