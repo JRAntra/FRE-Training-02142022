@@ -16,7 +16,30 @@ h1 {
   margin: 10px;
 }
 
-/* input section */
+.form {
+  display: flex;
+  flex-direction: column
+}
+
+.form_fields {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.form_inputs {
+  padding: 10px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+/* 
 .inputs {
   display: grid;
   gap: 10px 15px;
@@ -38,7 +61,7 @@ input:focus {
   box-shadow: 2px 2px 16px #719ECE;
 }
 
-/* conditions and submit section */
+
 .agree {
   margin: 10px 0;
 }
@@ -83,7 +106,7 @@ a {
   background-color: rgb(13, 189, 13);
 }
 
-/* Queries */
+
 @media only screen and (max-width: 900px){
   body {
     width: 580px;
@@ -94,4 +117,4 @@ a {
   body {
     width: 300px;
   }
-}
+} */
