@@ -44,8 +44,10 @@ body{
 .body__nav{
     width:100vw;
     background-color:var(--navBackground);
-    padding:0.5em;
+    padding:0.5em 0;
     position:fixed;
+    box-sizing:border-box;
+    margin:0;
 }
 
 .body__nav ul{
@@ -53,6 +55,7 @@ body{
     display:flex;
     width:50%;
     max-width:700px;
+    margin:0;
 }
 
 .body__nav ul li{
@@ -73,15 +76,10 @@ body{
     max-width:1500px;
 }
 
-main{
-    width:100vw;
-    margin:0;
-    padding:0;
-}
-
 .main__header{
-    width:100vw;
-    height:auto;
+    display:flex;
+    flex-direction:column;
+    margin:0;
     padding:10em 0;
     background:var(--titleBackgroundColor);
     box-sizing:border-box;
@@ -91,6 +89,15 @@ main{
     font-size:5em;
 }
 
+
+main{
+    margin:0;
+    padding:0;
+}
+
+
+
+
 .main__para{
     padding:5em 0em;
     display:grid;
@@ -99,11 +106,11 @@ main{
 }
 
 footer{
-    width:100vw;
+    width:100vw;    
     position:absolute;
     bottom:0;
     margin:0;
-    padding:10px;
+    padding:10px 0;
     display:flex;
     background-color:var(--footerColor);
 }
@@ -135,6 +142,41 @@ footer{
     text-decoration:none;
 }
 
+@media (max-width:700px){
+    .main__para{
+        display:flex;
+        flex-flow:column;
+    }
+    
+    .main__para p{
+        padding:2em 0;
+    }
+    
+    body{
+        display:block;
+    }
+    
+    footer{
+        position:static;
+        display:flex;
+        flex-flow:column;
+        width:100vw;
+    }
+    
+    .footer__ul{
+        width:80%;
+        margin:0 auto;
+    }
+}
+
+
+/*Lessons Learned
+
+Do not apply padding left and right for
+elements that have full viewport widths.
+It will create disruption between the spacing edges of the element relative to the side of the viewport
+
+*/
 
 
 
