@@ -1,7 +1,7 @@
 :root{
     --shadow:#a6c8ff;
     --links:#0040a8;
-    --text: 'Maven Pro', sans-serif;
+    --text: 'Hind Siliguri', sans-serif;
 }
 
 html{
@@ -37,28 +37,13 @@ nav{
     text-align:center;
     padding:1em;
     margin:0 auto;
+    font-size:20px;
 }
 
 .sec__cont__nav:hover{
     background-color:black;
     border-radius:5px;
-}
-
-
-#search:hover{
-    background-color:white;
-}
-
-.nav__link{
-    height:3em;
-    width:15em;
-    padding:0.5em;
-    
-}
-
-.nav__sec img{
-    height:30px;
-    width:30px;    
+    text-decoration:underline 4px white;
 }
 
 .nav__sec a{
@@ -67,14 +52,23 @@ nav{
     letter-spacing:2px;
 }
 
+#search-box{
+    background-color:white;    
+}
+
+#search{
+    height:30px;
+    width:30px;
+}
+
+
 main{
     width:80%;
     max-width:1500px;
     padding:0;
     margin:0 auto;
     background-color:rgba(227, 227, 227, 0.1);
-    border-radius:10px;
-    border:solid 2px var(--shadow);  
+    border-radius:10px;  
 }
 
 
@@ -105,12 +99,13 @@ main{
 .sec__tile h2{
     font-size:3em;
     font-weight:bolder;
-    padding:0.5em 0;
+    padding:0;
+    margin:0
 }
 
 .sec__tile p{
-    padding:0.3em 0;
-    
+    padding-bottom:5px;
+    margin:0;
 }
 
 .tile__link{
@@ -160,6 +155,11 @@ footer{
         height:3em;
         width:100%;
         border:0.5px solid lightslategrey;
+    }
+    
+    #search{
+        width:20px;
+        height:20px;
     }
     
     main{
