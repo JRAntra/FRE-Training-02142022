@@ -28,15 +28,24 @@ nav>ul {
 }
 
 nav>ul>li {
+  padding-top: 8%;
   display: flex;
-  text-decoration: none;
-  color: black;
-  opacity: 80%;
+  opacity: 60%;
   width: 33vw;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
   margin-right: 50px;
+}
+
+ul>li>a {
+  color: black;
+  opacity: 70%;
+}
+
+ul>li>a:hover {
+  color: black;
+  opacity: 100%;
 }
 
 .nav--title {
@@ -52,24 +61,34 @@ nav>ul>li>img {
   align-self: center;
 }
 
+nav>ul>li>img:active {
+  cursor: grab;
+  transform: scale(1.1);
+}
+
+
 nav input {
   max-width: 20vw;
 }
 
 footer {
-  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  height: 8rem;
   font-size: max(80%);
-  background-color: lightgrey;
+  background-color: rgb(245, 241, 241);
   position: relative;
   bottom: 0;
   width: 100vw;
-  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
 }
 
-@media screen and (max-width: 600px) {
+footer>div {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 900px) {
   header {
     position: relative;
     top: 0;
