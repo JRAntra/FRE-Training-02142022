@@ -1,0 +1,28 @@
+/* main post */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
+
+.post {
+  display: inline-block;
+  font-size: 34px;
+}
+
+.post p {
+  margin: 10px 0;
+  font-size: 0.5em;
+}
+
+/* aside */
+
+aside {
+  height: 100%;
+  display: inline-block;
+}
+
+.about {
+  background-color: rgb(190, 190, 190);
+  padding: 10px;
+}

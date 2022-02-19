@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  flex-direction: column;
+  width: 1100px;
+  margin: 0 auto;
+  padding: 100px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
