@@ -10,6 +10,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .blogs {
@@ -30,10 +31,52 @@ header {
   padding-bottom: 5px;
 }
 
+.card_blog {
+  color: cornflowerblue;
+}
+
+.card_post {
+  color: green;
+}
+
 .card_description {
   padding: 10px 0 20px 0;
 }
 
 .card_date {
   color: gray;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid gray;
+  margin-top: 40px;
+  background-color: rgba(180, 180, 180, 0.3);
+  height: 100px;
+}
+
+@media (max-width: 980px) {
+  body {
+    width: 600px;
+  }
+  
+  .card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 640px) {
+
+  body {
+    width: 300px;
+    padding: 0;
+  }
+  
+  .card {
+    width: 100%;
+  }
+  
 }
