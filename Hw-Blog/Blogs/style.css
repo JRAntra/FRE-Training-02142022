@@ -1,7 +1,7 @@
 body {
   display: flex;
   flex-direction: column;
-  width: 900px;
+  width: 1100px;
   margin: 0 auto;
   padding: 100px;
 }
@@ -27,9 +27,13 @@ header {
 }
 
 .card_tag {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 .card_description {
   padding: 10px 0 20px 0;
+}
+
+.card_date {
+  color: gray;
 }
