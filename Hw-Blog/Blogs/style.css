@@ -32,16 +32,6 @@
   color: gray;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-top: 2px solid gray;
-  margin-top: 40px;
-  background-color: rgba(180, 180, 180, 0.3);
-  height: 100px;
-}
 
 @media (max-width: 980px) {
   body {

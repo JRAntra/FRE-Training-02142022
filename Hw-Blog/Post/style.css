@@ -3,11 +3,11 @@ main {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 10px;
+  font-size: 34px;
 }
 
 .post {
   display: inline-block;
-  font-size: 34px;
 }
 
 .post_date {
@@ -39,14 +39,76 @@ main {
   padding-left: 30px;
 }
 
+.buttons button {
+  padding: 10px;
+  background-color: white;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn_old {
+  color: cornflowerblue;
+  border: 2px solid cornflowerblue;
+}
+
+.btn_new {
+  color: gray;
+  border: 2px solid gray;
+}
+
 /* aside */
 
-aside {
-  height: 100%;
-  /* display: inline-block; */
+aside div {
+  margin-bottom: 30px;
 }
 
 .about {
-  background-color: rgb(190, 190, 190);
+  background-color: rgba(190, 190, 190, 0.5);
   padding: 10px;
+}
+
+.archive p, .archive li, .about p {
+  font-size: 0.5em;
+}
+
+.archive h3, .about h3 {
+  font-size: 0.8em
+}
+
+.archive ul li{
+  display: block
+}
+
+@media (max-width: 1200px) {
+  body {
+    width: 900px;
+  }
+}
+
+@media (max-width: 940px) {
+  body {
+    width: 700px;
+  }
+
+  main {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    width: 300px;
+    padding: 0;
+  }
+
+  aside {
+    display: none;
+  }
+
+  main {
+    font-size: 24px;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
 }
