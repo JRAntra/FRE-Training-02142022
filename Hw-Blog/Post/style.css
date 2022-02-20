@@ -10,16 +10,40 @@ main {
   font-size: 34px;
 }
 
-.post p {
+.post_date {
+  color: gray;
+}
+
+.post_text {
+  padding-bottom: 10px;
+}
+
+.post_underline {
+  border-bottom: 2px solid rgba(128, 128, 128, 0.5);
+}
+
+.post_block {
+  border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.post h3 {
+  font-size: 0.8em
+}
+
+.post p, .post li {
   margin: 10px 0;
   font-size: 0.5em;
+}
+
+.post ul, .post ol {
+  padding-left: 30px;
 }
 
 /* aside */
 
 aside {
   height: 100%;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .about {
