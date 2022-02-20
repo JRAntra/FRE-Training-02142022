@@ -1,0 +1,93 @@
+.post__page--row{
+    display: flex;
+    width: 100%;
+    padding: 0 35px;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.paragraph__border--one, .paragraph__border--two p{
+    width: 100%;
+    border: 1px rgb(202, 202, 202);
+    border-style: solid;
+}
+
+.paragraph__border--one{
+    padding-bottom: 1em;
+}
+
+.older__newer--buttons button{
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 30px;
+    background-color: #FFF;
+    border-color: rgb(15, 159, 243);
+    color: rgb(15, 159, 243)
+}
+
+.older__newer--buttons button:hover{
+    color: #FFF;
+    background-color:rgb(15, 190, 243);
+}
+
+.dotted__list{
+    padding-left: 3em;
+}
+
+.numbered__list{
+    list-style-type: decimal;
+    padding-left: 3em;
+}
+
+.post--img img{
+    width: 300px;
+    height: 200px;
+}
+
+.about--section{
+    background-color: rgb(238, 238, 238);
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.archives--section, .elsewhere--section{
+    margin-bottom: 40px;
+}
+
+p, ul{
+    line-height: 22px;
+}
+
+.sidebar__list{
+    list-style-type: none;
+}
+
+.column--two{
+    padding-left: 5%;
+}
+
+.section__one h2{
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.section__one h6{
+    font-size: 0.8em;
+    color: rgb(201, 198, 198);
+}
+
+a{
+    color: rgb(15, 159, 243);
+}
+
+@media screen and (max-width: 448px){
+    .post__page--row{
+        display: grid;
+    }
+
+    .column--two{
+        padding: 0;
+    }
+}
