@@ -174,20 +174,73 @@ Array.prototype.myForEach = function (callback) {
 // });
 // console.log(arr1);
 
-const arr = [1, 2, 32];
+// const arr = [1, 2, 32];
 
-Array.prototype.myFilter = function (callback) {
-    const res = [];
-    for (let i = 0; i < this.length; i++) {
-        if (callback(this[i], i, this)) {
-            res.push(this[i]);
-        }
-    }
-    return res;
-};
+// Array.prototype.myFilter = function (callback) {
+//     const res = [];
+//     for (let i = 0; i < this.length; i++) {
+//         if (callback(this[i], i, this)) {
+//             res.push(this[i]);
+//         }
+//     }
+//     return res;
+// };
 
-const arr1 = arr.myFilter((num, i, array) => {
-    return num > 4;
-});
+// const arr1 = arr.myFilter((num, i, array) => {
+//     return num < 4;
+// });
 
-console.log(arr1);
+// console.log(arr1);
+
+// // myReduce
+
+// const str = 'abc';
+// // ['a', 'b', 'c']
+// console.log(str.split('').reduce((acc, cur, i, array) => acc + cur + cur, '')) // 'aabbcc';
+
+// const arr = [1, 2, 3];
+// let acc = 0;
+// for (let cur of arr) {
+//     acc += cur;
+// }
+// console.log(acc);
+// console.log(arr.reduce((acc, cur) => acc + cur, 0));
+
+// function foo(arr) {
+//     // const obj = {};
+//     // for (let cur of arr) {
+//     //     obj[cur.name] = cur.age;
+//     // }
+//     // return obj;
+
+//     // return arr.reduce((acc, cur) => {
+//     //     acc[cur.name] = cur.age;
+//     //     return acc;
+//     // }, {});
+
+//     return arr.reduce((acc, cur) => ({...acc, [cur.name]: cur.age}));
+// }
+// const foo = arr => arr.reduce((acc, cur) => ({...acc, [cur.name]: cur.age}));
+
+// const arr = [
+//     { name: "Jojo", age: 18 },
+//     { name: "Dio", age: 1 },
+//     { name: "Jill", age: 148 },
+//     { name: "Tom", age: 128 },
+// ];
+
+// console.log(foo(arr));
+// console.log({ name: "Jojo", age: 18, Dio: 1, Jill: 148, Tom: 128 });
+
+// console.log({ Jojo: 18, Dio: 1, Jill: 148, Tom: 128 });
+
+// const numbers = [175, 50, 25]; // 3
+
+// numbers.reduce(myFunc); // 100
+
+// function myFunc(total, num) {
+
+//     console.log(num);
+//     return total - num;
+// }
+
