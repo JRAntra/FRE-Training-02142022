@@ -37,7 +37,7 @@
   .header__link {
     font-size: small;
   }
-  .header__icon {
+  .header__icon img {
     font-size: small;
   }
   .header {
@@ -61,7 +61,7 @@
   .header__link {
     font-size: smaller;
   }
-  .header__icon {
+  .header__icon img {
     font-size: smaller;
   }
 

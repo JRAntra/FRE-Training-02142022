@@ -1,5 +1,5 @@
-@import "../mainPage/footer.css";
 @import "../mainPage/header.css";
+@import "../mainPage/footer.css";
 
 :root {
   --color--post__content--about: #f1eeee;
@@ -152,6 +152,10 @@ footer a {
   color: var(--color--anchor);
 }
 
+.header__icon img {
+  margin-top: 15px;
+}
+
 @media screen and (max-width: 800px) {
   h1 {
     font-size: 1.5rem;
@@ -159,7 +163,7 @@ footer a {
   .header__link {
     font-size: smaller;
   }
-  .header__icon {
+  .header__icon img {
     font-size: smaller;
   }
 

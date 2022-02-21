@@ -17,3 +17,8 @@
   text-decoration: underline;
   margin-right: 30px;
 }
+
+.header__icon img {
+  width: 3vw;
+  height: 3vw;
+}
