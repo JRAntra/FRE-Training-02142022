@@ -7,9 +7,13 @@
 }
 
 .header__link {
+  text-decoration: none;
   color: rgb(158, 158, 157);
+  text-decoration: underline;
 }
 
-.header__title {
+.header__title a {
+  color: black;
   text-decoration: underline;
+  margin-right: 30px;
 }

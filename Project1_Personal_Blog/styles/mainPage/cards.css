@@ -27,6 +27,10 @@
   color: var(--card__category-blue);
 }
 
+.card__category.design {
+  color: rgb(54, 201, 54);
+}
+
 .card__title {
   margin-bottom: 2px;
 }

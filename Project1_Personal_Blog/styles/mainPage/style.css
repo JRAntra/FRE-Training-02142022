@@ -7,6 +7,7 @@
   --card__linkColor-blue: #6484eb;
   --card__border: #ebebebf5;
   --footer: #bbb8b8f5;
+  --footer--link: #6484eb;
 }
 
 *,
@@ -62,6 +63,10 @@
   }
   .header__icon {
     font-size: smaller;
+  }
+
+  .header__title {
+    margin-right: 40px;
   }
   .card {
     width: 300px;
