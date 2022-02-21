@@ -1,0 +1,25 @@
+:root {
+    --color-skyblue: #3498db;
+    --color-primary: #4285f4;
+    --color-primary-dark: #0d47a1;
+    --color-success: #00c851;
+    --color-success-dark: #007e33;
+    --color-grey: #e0e0e0;
+    --color-grey-dark: #757575;
+    --color-footer-background: #f5f5f5;
+  }
+
+  
+/* Font Colors classes*/
+
+.font-color-gray {
+    color: var(--color-grey-dark);
+}
+
+.font-color-blue {
+    color: var(--color-primary)
+} 
+
+.font-color-green {
+    color: var(--color-success)
+}
