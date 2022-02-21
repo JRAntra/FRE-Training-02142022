@@ -1,14 +1,16 @@
 
-:root {
-    --green: #008000;
-    --blue: #0096FF;
-    --gray: #c6bfbf;
-  }
+@import "blogPostStyles.css";
+
+@import "buttonStyles.css";
+
+@import "colorStyles.css";
+
 
 body {
     margin: 15%;
     min-width: 290px;
     max-width: 1920px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 

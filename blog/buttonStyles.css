@@ -1,0 +1,23 @@
+.button__clear {
+  border-style: none;
+}
+
+button {
+  background-color: white;
+color: var(--gray);
+padding: 20x 30px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+margin: 4px 2px;
+border-radius: 30px;
+border-color: var(--gray);
+border-style: outset;
+max-width: 150px;
+font-size: .7em;
+}
+
+button:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+}
