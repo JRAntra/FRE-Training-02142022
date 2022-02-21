@@ -244,3 +244,30 @@ Array.prototype.myForEach = function (callback) {
 //     return total - num;
 // }
 
+// // spread operator && rest parameters
+
+// const arr = [1, 2, 3];
+
+// const arr1 = [0, ...arr, 4, 5];
+
+// console.log(arr1);
+
+// const foo = (num, ...args, num2) => {
+//     console.log(args);
+// }
+
+// foo(1, 2, 3, 4, 5);
+
+// const target = (a, b, c) => {
+//     return a + b + c;
+// }
+
+// function reptarget(callback) {
+//     return function(...args) {
+//         return callback(...args);
+//     }
+// }
+
+// const myfn = reptarget(target);
+
+// console.log(myfn(1, 2, 3));
