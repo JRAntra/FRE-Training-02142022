@@ -195,6 +195,49 @@ footer{
     text-align:center;
 }
 
+@media (max-width:800px){
+    
+    h2{
+        font-size:2em;
+        padding: 0.5em 0;
+    }
+    
+    h3{
+        font-size:1.5em;
+        padding: 0.5em 0;
+    }
+    
+    h4{
+        font-size: 1em;
+        padding: 0.5em 0;
+    }
+    
+    .nav-container{
+        flex-flow:column;
+        
+    }
+    
+    header{
+        margin: 8em 0 0 0;
+        width:100%;    
+    }
+    
+    .title{
+        font-size:3em;
+    }
+    
+    .div--tocenter{
+        flex-flow:column;
+    }
+    
+    .article__body blockquote, .article__body{
+        width:100%;
+        margin:0;
+        padding:2em;
+    }    
+    
+}
+
 
 
 
