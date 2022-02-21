@@ -15,22 +15,6 @@ div[name=titleArea] {
     background-color: white;
 }
 
-@media screen and (max-width : 649px) {
-    div[name=titleArea] {
-        position: fixed;
-        display: flex;
-        flex-wrap: nowrap;
-        z-index: 1;
-        top: 0;
-        padding-top: 1rem;
-        left: 50%;
-        width: 100%;
-        height: 50px;
-        border-style: hidden;
-        background-color: white;
-    }
-}
-
 p[name="titleArea__titleText"] {
     font-size: 2em;
     flex:1;
@@ -73,6 +57,19 @@ div[name=postarea] {
         height: 100%;
         display: flex;
         flex-wrap: wrap;
+    }
+    div[name=titleArea] {
+        position: fixed;
+        display: flex;
+        flex-wrap: nowrap;
+        z-index: 1;
+        top: 0;
+        padding-top: 1rem;
+        left: 50%;
+        width: 100%;
+        height: 50px;
+        border-style: hidden;
+        background-color: white;
     }
 }
 
@@ -135,3 +132,40 @@ ul[name=sidebox__elsewhere] {
     padding-left: 1em;
 }
 
+@media screen and (max-width : 1300px) {
+    div[name=displayarea] {
+        position: absolute;
+        width: 100%;
+        margin-top: 1.5em;
+        display: flex;
+        justify-content:left;
+        flex-wrap: nowrap;
+        padding-left: 0.5em;
+        padding-top:2em;
+    }
+
+    div[name=contentbox] {
+        max-width: 448px;
+        min-width: 240px;
+        margin-right: 0.75em;
+    }
+
+    ul[name=sidebox__about] {
+        padding: 0.5em;
+        flex: 1;
+        height: auto;
+        background-color: aquamarine;
+        margin-bottom: 2em;
+        margin-right: 0.5em;
+    }
+
+    ul[name=sidebox__archives] {
+        margin-bottom: 2em;
+        padding-left: 0.5em;
+    }
+
+    ul[name=sidebox__elsewhere] {
+        margin-bottom: 2em;
+        padding-left: 0.5em;
+    }
+}
