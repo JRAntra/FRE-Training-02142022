@@ -1,0 +1,59 @@
+Javascript (Instructor: Yue Dong)
+
+The Difference of Let, var, and const
+
+var  - is a functional scope.
+hoisting - move it / declare it at the top.
+
+Javascript runs the program line by line.
+
+let keyword - A must be hoisted
+You cannot use a variable if not initialized first. if empty value, let will declare cannot access while variable's output will be undefined
+
+let and const have the same function, but let is can only be used within a block. let can also be reassign.
+
+const - cannot be reassigned
+
+functions are hoisted top.
+
+highly suggest using let and const.
+
+coercion tries to change the datatype to process the data
+
+Object Oriented Programming (OOP)
+
+Javascript is designed as functional programming - ES6
+
+Encapsulation - it is a feature in programming 
+
+Inheritance - inherit the properties of classes
+
+Polymorphism - having many forms
+
+Can I Use website is for front-end developers
+
+# sign is a private data.
+
+Javascript Arrays
+for loops
+    for (let i = 0; i < arr.length; i++) {}
+
+    for (let i in arr){
+        console.log(arr[i]);
+    }
+
+.map will return something, but for each will retunr nothing
+
+continue jumps over one iteration in the loop
+
+break jumpst out of a loop
+
+.filter - filters the array to find the a data
+
+.reduce - has two arguments (call back function, initacc)
+
+Assignment is to make my own reducer
+
+Spread operator && rest parameters
+
+spread is a parameter that are triple dots... rest should be in the last part of the argument.
