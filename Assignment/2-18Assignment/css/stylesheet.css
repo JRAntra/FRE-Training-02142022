@@ -15,6 +15,22 @@ div[name=titleArea] {
     background-color: white;
 }
 
+@media screen and (max-width : 649px) {
+    div[name=titleArea] {
+        position: fixed;
+        display: flex;
+        flex-wrap: nowrap;
+        z-index: 1;
+        top: 0;
+        padding-top: 1rem;
+        left: 50%;
+        width: 100%;
+        height: 50px;
+        border-style: hidden;
+        background-color: white;
+    }
+}
+
 p[name="titleArea__titleText"] {
     font-size: 2em;
     flex:1;
@@ -47,6 +63,17 @@ div[name=postarea] {
     justify-content: space-between;
     justify-items: center;
     align-items: space-around;
+}
+
+@media screen and (max-width : 649px) {
+    div[name=postarea] {
+        position: absolute;
+        margin-top: 3em;
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 ul[name=sidebox__about] {
