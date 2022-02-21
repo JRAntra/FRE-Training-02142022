@@ -1,0 +1,157 @@
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root {
+    --black: #000;
+    --gray: #c6bfbf;
+    --Yelow: #ccb240;
+    --red: #db1b25;
+    --bkgd:rgba(101, 142, 230, 0.445);
+    --lightgrey:rgb(209, 207, 211);
+    --darkgrey:rgb(100, 98, 98);
+
+}
+
+body{
+    padding:0;
+    margin:0;
+    font-family: sans-serif;
+    background-color: var(--bkgd);
+}
+
+
+.header {   
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    box-sizing: border-box;
+    height: 50px;
+    
+}
+.header ul{
+    width: 100%;
+    display: flex;
+    list-style-type:none;
+}
+
+.header-left{
+    flex: auto;
+    margin: 10px;
+    text-align: left;
+}
+.header-left li a {
+    color: var(--gray);
+}
+
+.header-right{
+    flex: auto;
+    margin: 10px;
+    text-align: right;
+}
+
+.header-middle li a{
+    color: var(--black);
+    font-size: large;
+}
+
+.header-middle{
+    flex: auto;
+    margin: 10px;
+    text-align: center;
+}
+.main-cont {
+    padding:5% 5%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    padding: 15px;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+.main-left {
+    margin: 1%;
+}
+
+.main-about {
+    margin: 1%;
+    background-color: var(--lightgrey);
+}
+
+footer {
+    position: absolute;
+    background-color: var(--gray);
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    padding: 2%;
+}
+
+.main-padding {
+    padding: 1%;
+} 
+
+h1,h2,h3,h4 {
+    padding: 2%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+code {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    padding: 1%;
+}
+.cont-ul{
+    list-style-type: none;
+}
+
+.cont-ul a {
+    padding: 1%;
+    font-style: italic;
+}
+.cont-ul a:hover {
+    color: var(--red)
+}
+
+.main-button button {
+    border-radius: 10px;
+    width: 100px;
+    height: auto;
+    background-color: white;
+    font-style: bold;
+}
+
+.main-button button:hover {
+    color:red;
+}
+
+.main-button {
+    padding:1%;
+}
+
+.main-list {
+    padding: 2%;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.date {
+    color:var(--darkgrey);
+    font-style: italic;
+    padding: 2%;
+}

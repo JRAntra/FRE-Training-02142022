@@ -69,7 +69,7 @@ body{
     margin-bottom: 5%;
     box-sizing: border-box;
     
-    background-image: url(bkgd.jpeg);
+    background-image: url(./bkgd.jpeg);
     background-repeat: no-repeat;
     padding: 15px;
     background-size: cover;
@@ -121,3 +121,5 @@ a:hover {
 #builder:hover {
     color: var(--Yelow);
 }
+
+
