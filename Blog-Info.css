@@ -1,0 +1,145 @@
+.container{
+    display:flex;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container > div{
+    height: 50px;
+}
+
+#blog_title{
+    text-align: center;
+    font-size: xx-large;
+    flex-grow: 4;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: 20px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+#subscribe{
+    flex-grow: 3;
+}
+
+
+#search{
+    text-align: right;
+    flex-grow: 3;
+}
+
+
+.grid_container{
+    display:flex;
+    width: 100%;
+}
+
+
+#blog_link{
+    color: blue;
+    font-weight: lighter;
+    text-decoration: underline;
+}
+
+
+.main_section{
+    display:grid;
+    width:70%;
+    padding-left: 30px;
+    background-color: rgb(204, 204, 204);
+
+}
+
+
+#title{
+    font-weight: bolder;
+    font-size: xx-large;
+    width: 100%;
+}
+
+#date{
+    font-weight: lighter;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+
+#sp_box1{
+    box-shadow: 0 0 2px #5c6166;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#sp_box2{
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: gray;
+    border-style: solid;
+}
+
+#bold_text{
+    font-weight: bolder;
+}
+
+
+#heading_title{
+    font-weight: bolder;
+    font-size: x-large;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.head_block{
+    margin-top: 30px;
+}
+
+#sub_heading_title{
+    font-weight: bolder;
+    font-size: x-large;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.sub_head_block{
+    margin-top: 30px;
+}
+
+.side_section{
+    display:grid;
+    width:30%;
+    padding-left: 30px;
+    height: fit-content;
+}
+
+#about_box{
+    background-color: lightgray;
+    width:80%;
+    height:fit-content;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+#sub_sec_title{
+    font-weight: bolder;
+    font-size: x-large;
+    font-style: italic;
+}
+
+#Archives{
+    margin-bottom: 30px;
+}
+
+
+#Elsewhere{
+    margin-bottom: 30px;
+}
+
+
+#footer{
+    background-color: #dce7ec;
+    height: 100px;
+    text-align: center;
+    padding-top: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
