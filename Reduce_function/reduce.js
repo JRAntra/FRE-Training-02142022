@@ -1,9 +1,10 @@
-const arr = [1, 2, 3, 55, 20];
-
+const arr = [1, 2, 3];
+const str = "abc";
 Array.prototype.myReduce = function (callback, initial) {
   let acc = this[0];
-  if (typeof initial == "undefined" || initial.length == 0) {
-    this.slice(1).forEach((num, i, array) => {
+
+  if (typeof initial == "undefined") {
+    this.forEach((num, i, array) => {
       acc = callback(acc, num, i, array);
     });
   } else {
@@ -14,5 +15,5 @@ Array.prototype.myReduce = function (callback, initial) {
   }
   return acc;
 };
-
-console.log(arr.myReduce((acc, num) => acc + num, 5));
+console.log(arr.myReduce((acc, num, i, array) => acc + num, 8));
+console.log(str.split("").myReduce((acc, num, i, array) => acc + num + num));
