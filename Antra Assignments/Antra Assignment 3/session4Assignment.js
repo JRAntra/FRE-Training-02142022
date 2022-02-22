@@ -13,27 +13,6 @@ let myarr = ["hello" , "spicy", "random" , "pickle"]
 
 
 // console.log(result);
-
-
-Array.prototype.myReduceString = function(callback) {
-    var a = "";
-
-    for (let i=0; i<this.length; i++){
-        callback(a = a + " " + this[i]);
-    }
-
-    return a
-} //This creates a user-declared reduce function.
-
-
-newString = myarr.myReduceString ((acc, myString) => 
-    console.log(acc),
-);
-
-console.log(newString);
-
-
-
 // function product(a, b){
 //     return a*b;
 // }
@@ -53,3 +32,20 @@ console.log(newString);
 // );
 
 // console.log(filtered);
+
+Array.prototype.myReduceString = function(callback) {
+    var a = "";
+
+    for (let i=0; i<this.length; i++){
+        callback(a = a + " " + this[i]);
+    }
+
+    return a
+} //This creates a user-declared reduce function.
+
+
+newString = myarr.myReduceString ((acc, myString) => 
+    console.log(acc),
+);
+
+console.log(newString);
