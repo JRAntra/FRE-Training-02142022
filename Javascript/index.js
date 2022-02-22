@@ -311,6 +311,10 @@
 //     ]
 // };
 
+// import {MatDividerModule} from '@angular/material/divider';
+// const {MatDividerModule} = '@angular/material/divider';
+
+
 // console.log(links.find(({ name }) => name === 'cnn').link);
 
 // // copy obj in js
@@ -371,3 +375,184 @@
 
 // _.cloneDeep() 
 
+
+// const obj = {
+//     name: 'Jojo'
+// }
+
+// console.log(obj.name);
+
+// obj.age = 3;
+
+// const strarr = ['a', 'b', 'c'];
+
+// for (let d of strarr) {
+//     obj[d] = 3;
+// }
+
+// console.log(obj);
+
+// function foo(arr) {
+//     const obj = {};
+//     for (let cur of arr) {
+//         obj.cur.name = cur.age;
+//     }
+//     return obj;
+// }
+
+
+// const arr = [
+//     { name: "Jojo", age: 18 },
+//     { name: "Dio", age: 1 },
+//     { name: "Jill", age: 148 },
+//     { name: "Tom", age: 128 },
+// ];
+
+// console.log(foo(arr));
+
+
+// // ~~~~~~interview question~~~~~~~~~~~~
+// const first = [
+//     { userid: 2, name: 'Velen' },
+//     { userid: 56, name: 'Illidan' },
+//     { userid: 23, name: 'Muradin' },
+//     { userid: 12, name: 'Sylvanas' },
+//     { userid: 44, name: 'Cenarius' },
+//     { userid: 4, name: 'Gul\'Dan' }
+// ];
+// const second = [
+//     { userid: 2, role: 'Mage' },
+//     { userid: 4, role: 'Worlock' },
+//     { userid: 56, role: 'Demon Hunter' },
+//     { userid: 66, role: 'Druid' },
+//     { userid: 87, role: 'Shaman' },
+//     { userid: 12, role: 'Hunter' },
+// ];
+ 
+// function solution(fir, sec) {
+//     const arr = [...fir, ...sec];
+//     const map = {};
+
+//     arr.forEach(ele => {
+//         map[ele.userid] = {
+//             ...{ userid: null, name: null, role: null },
+//             ...map[ele.userid],
+//             ...ele
+//         }
+//     });
+
+//     return Object.values(map);
+// }
+
+// console.log(solution(first, second));
+
+// [
+//     { userid: 2, name: 'Velen', role: 'Mage' },
+//     { userid: 56, name: 'Illidan', role: 'Demon Hunter' },
+//     { userid: 23, name: 'Muradin', role: null },
+//     { userid: 12, name: 'Sylvanas', role: 'Hunter' },
+//     { userid: 44, name: 'Cenarius', role: null },
+//     { userid: 4, name: 'Gul\'Dan', role: 'Worlock' },
+//     { userid: 66, name: null, role: 'Druid' },
+//     { userid: 87, name: null, role: 'Shaman' },
+// ]
+
+// // closure
+
+// function foo() {
+// // ------
+//     const a = 10;
+
+//     function print(data) {
+//         console.log(data);
+//     }
+// // ------
+//     return {print, a};
+// }
+
+// // ~~~~~~~~~~~~~~~~ interview question ~~~~~~~~~~~~~~~~~~~~
+
+// const target = (a, b) => console.log(a + b);
+// // const t0 = (a, b, c, d) => console.log(a + b + c + d);
+
+// let fn = limitedFunction(1, target);
+
+// function limitedFunction(num, cb) {
+//     let counter = num;
+
+//     return function(...args) { // rest parameters --> collect -> []
+//         if (counter > 0) {
+//             counter--;
+//             cb(...args); // spread operator ---> drop
+//         } else {
+//             console.log('over limited!')
+//         }
+//     }
+// }
+
+// fn(6, 2); // 13
+// fn(2, 6); // 15
+// fn(6, 3); // 9
+// fn(9, 4); // 13
+// fn(5, 1); // over limited!
+// fn(2, 9); // over limited!
+
+// console.log(foo()[0]);
+
+// // curring
+// const foo = (a) => {
+// //
+//     let c = a;
+// //
+//     return function(b) {
+//         return c + b;
+//     }
+// }
+
+// console.log( foo(4)(5) ); // sum = 9
+
+// // ~~~~~~~~~~~~~~~~ interview question ~~~~~~~~~~~~~~~~~~~~
+
+// const callback1 = (a) => a + 2; // 5
+// const callback2 = (b) => b * 2; // 10
+// const callback3 = (c) => c - 2; // 8
+
+// console.log( runAll(callback1, callback2, callback3)(5) ); // 8
+
+// function runAll(...rest) {
+//     // let resnum = undefined;
+//     return function(num) {
+//         // resnum = num;
+//         // while (rest.length) {
+//         //     const cb = rest.shift();
+//         //     resnum = cb(resnum);
+//         // }
+//         // return resnum;
+//         return rest.reduce((acc, cur) => cur(acc), num);
+//     }
+// }
+
+// // iife
+
+const test = (function () {
+    function print(data) {
+        console.log(data);
+    }
+    return {
+        print
+    }
+})();
+
+test.print(5);
+
+// // this
+
+// // event loop
+
+// // callback hell
+
+// // promise
+
+
+
+// // todolist 
