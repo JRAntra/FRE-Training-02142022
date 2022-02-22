@@ -1,4 +1,4 @@
-let myarr = ["hello" , "spicy", "random" , "pickle"]
+
 
 // function addString (string){
 //     return string + " world ";
@@ -32,6 +32,7 @@ let myarr = ["hello" , "spicy", "random" , "pickle"]
 // );
 
 // console.log(filtered);
+let myarr = ["hello" , "spicy", "random" , "pickle"];
 
 Array.prototype.myReduceString = function(callback) {
     var a = "";
