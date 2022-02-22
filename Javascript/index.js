@@ -146,11 +146,11 @@
 //     console.log(arr[i]);
 // }
 
-Array.prototype.myForEach = function (callback) {
-    for (let i = 0; i < this.length; i++) {
-        callback(this[i], i, this);
-    }
-};
+// Array.prototype.myForEach = function (callback) {
+//     for (let i = 0; i < this.length; i++) {
+//         callback(this[i], i, this);
+//     }
+// };
 
 // arr.myForEach((num, i, array) => {
 //     array[i] = num + 1;
@@ -179,6 +179,7 @@ Array.prototype.myForEach = function (callback) {
 // Array.prototype.myFilter = function (callback) {
 //     const res = [];
 //     for (let i = 0; i < this.length; i++) {
+
 //         if (callback(this[i], i, this)) {
 //             res.push(this[i]);
 //         }
@@ -186,17 +187,20 @@ Array.prototype.myForEach = function (callback) {
 //     return res;
 // };
 
-// const arr1 = arr.myFilter((num, i, array) => {
-//     return num < 4;
+// const arr1 = arr.myFilter((cur, i, array) => {
+//     return true;
 // });
 
 // console.log(arr1);
 
+// let myarr = ["hello", "spicy", "random", "pickle"];
+
+
 // // myReduce
 
-// const str = 'abc';
+// const str = "abc";
 // // ['a', 'b', 'c']
-// console.log(str.split('').reduce((acc, cur, i, array) => acc + cur + cur, '')) // 'aabbcc';
+// console.log(str.split("").myReduce((acc, cur) => acc + cur + cur, "")); // 'aabbcc';
 
 // const arr = [1, 2, 3];
 // let acc = 0;
@@ -220,7 +224,8 @@ Array.prototype.myForEach = function (callback) {
 
 //     return arr.reduce((acc, cur) => ({...acc, [cur.name]: cur.age}));
 // }
-// const foo = arr => arr.reduce((acc, cur) => ({...acc, [cur.name]: cur.age}));
+// const foo = (arr) =>
+//     arr.myReduce((acc, cur) => ({ ...acc, [cur.name]: cur.age }));
 
 // const arr = [
 //     { name: "Jojo", age: 18 },
@@ -234,13 +239,24 @@ Array.prototype.myForEach = function (callback) {
 
 // console.log({ Jojo: 18, Dio: 1, Jill: 148, Tom: 128 });
 
+// Array.prototype.myReduce = function (...args) { // cb, initacc
+//     if (!args.length) return;
+
+//     let callback = args[0];
+//     let [index, acc] = args.length > 1 ? [0, args[1]] : [1, this[0]];
+
+//     for (let i = index; i < this.length; i++) {
+//         acc = callback(acc, this[i], i, this);
+//     }
+
+//     return acc;
+// };
+
 // const numbers = [175, 50, 25]; // 3
 
-// numbers.reduce(myFunc); // 100
+// console.log(numbers.myReduce(myFunc, 0)); // 100
 
 // function myFunc(total, num) {
-
-//     console.log(num);
 //     return total - num;
 // }
 
@@ -271,3 +287,87 @@ Array.prototype.myForEach = function (callback) {
 // const myfn = reptarget(target);
 
 // console.log(myfn(1, 2, 3));
+
+
+// // // destructure;
+
+// const [a, b] = [1, 2];
+
+// const { element, company, name, age } = {
+//     name: 'Jojo',
+//     age: 18,
+//     company: 'Jump'
+// }
+
+// const { links } = {
+//     id: 1,
+//     name: 'David Dong',
+//     links: [
+//         { name: 'wechat',       link: 'wechat.com'      },
+//         { name: 'apple',        link: 'apple.com'       },
+//         { name: 'cnn',          link: 'cnn.com'         },
+//         { name: 'fox',          link: 'fox.com'         },
+//         { name: 'hbo',          link: 'hbo.com'         },
+//     ]
+// };
+
+// console.log(links.find(({ name }) => name === 'cnn').link);
+
+// // copy obj in js
+// // shallow copy vs. deep copy
+
+// const obj = {
+//     name: 'Dio',
+//     arr: 3
+// };
+// // const obj1 = obj;
+// // console.log(obj === obj1);
+
+// const obj2 = {...obj};
+// // console.log(obj.arr === obj2.arr);
+
+// let arr = [1, 2];
+// arr.push(3);
+
+
+// class A {
+//     #arr = [];
+
+//     get arr() {
+//         return this.#arr;
+//     }
+//     set arr(newarr) {
+//         this.#arr = newarr;
+
+//         console.log('hello from class'); // rerender
+//     }
+// }
+// const a = new A(); 
+
+// a.arr = [1, 2, 3];
+
+// console.log('arr after init: ', a.arr);
+
+// a.arr.push(4);
+// console.log('arr after push: ', a.arr);
+
+// a.arr = [...a.arr, 5];
+// console.log('arr after push: ', a.arr);
+
+// mutable data, immutable data;
+
+
+// // deep copy by JSON.stringify;
+// const obj = {
+//     name: 'Dio',
+//     arr: [1, 2, 3],
+//     date: new Date(),
+//     foo: function () {}
+// };
+// console.log(JSON.stringify(obj));
+
+// const obj3 = JSON.parse(JSON.stringify(obj));
+// console.log(obj, obj3);
+
+// _.cloneDeep() 
+
