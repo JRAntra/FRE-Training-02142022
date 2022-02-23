@@ -534,16 +534,16 @@
 
 // // iife
 
-const test = (function () {
-    function print(data) {
-        console.log(data);
-    }
-    return {
-        print
-    }
-})();
+// const test = (function () {
+//     function print(data) {
+//         console.log(data);
+//     }
+//     return {
+//         print
+//     }
+// })();
 
-test.print(5);
+// test.print(5);
 
 // // this
 
