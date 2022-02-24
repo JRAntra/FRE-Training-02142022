@@ -189,7 +189,9 @@
 // };
 
 // const arr1 = arr.myFilter((cur, i, array) => {
-//     return true;
+//     let a = 1 * 3 - 2;
+
+//     return a === cur;
 // });
 
 // console.log(arr1);
