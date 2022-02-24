@@ -1,5 +1,6 @@
 const Api = (() => {
-    const baseUrl = "https://jsonplaceholder.typicode.com";
+    // const baseUrl = "https://jsonplaceholder.typicode.com";
+    const baseUrl = "http://localhost:3000";
     const path = "todos";
 
     const getTodos = () =>
@@ -10,9 +11,19 @@ const Api = (() => {
             method: "DELETE",
         });
 
+    const addTodo = (newtodo) => fetch([baseUrl, path].join("/"), {
+        method: 'POST',
+        body: JSON.stringify(newtodo),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+        .then((response) => response.json());
+
     return {
         getTodos,
         deleteTodo,
+        addTodo
     };
 })();
 
@@ -21,6 +32,7 @@ const View = (() => {
     const domstr = {
         todolist: ".todolist-container",
         deletbtn: ".deletebtn",
+        inputbox: '.todolist-input'
     };
     const render = (ele, tmp) => {
         ele.innerHTML = tmp;
@@ -46,6 +58,14 @@ const View = (() => {
 })();
 // ~~~~~~~~~~~~~Model~~~~~~~~~~~~~
 const Model = ((api, view) => {
+
+    class Todo {
+        constructor(title) {
+            this.userId = 2,
+            this.title = title,
+            this.completed = false
+        }
+    }
     class State {
         #todolist = [];
 
@@ -72,17 +92,36 @@ const Model = ((api, view) => {
 
     const getTodos = api.getTodos;
     const deleteTodo = api.deleteTodo;
+    const addTodo = api.addTodo;
 
     return {
         getTodos,
         deleteTodo,
+        addTodo,
         State,
+        Todo
     };
 })(Api, View);
 // ~~~~~~~~~~~~~Controller~~~~~~~~~~~~~
 const Controller = ((model, view) => {
     const state = new model.State();
     const todolist = document.querySelector(view.domstr.todolist);
+
+    const addTodo = () => {
+
+        const inputbox = document.querySelector(view.domstr.inputbox);
+        inputbox.addEventListener('keyup', event => {
+            if (event.key === 'Enter' && event.target.value !== '') {
+                const todo = new model.Todo(event.target.value);
+                
+                model.addTodo(todo).then(td => {
+                    state.todolist = [td, ...state.todolist];
+                });
+                event.target.value = '';
+            }
+        });
+
+    }
 
     const deletTodo = () => {
         todolist.addEventListener("click", (event) => {
@@ -102,6 +141,7 @@ const Controller = ((model, view) => {
     const bootstrap = () => {
         init();
         deletTodo();
+        addTodo();
     };
 
     return { bootstrap };
