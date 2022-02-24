@@ -40,12 +40,16 @@
 
 // console.log(newarr);
 
-Car = {
+const Car = {
     make:[],
     model:[],
-    year:[]
-
-}
+    year:[],
+    showCars() {
+        for (let x = 0; x < Car.length; x++){
+            console.log(make[x] + " " + model[x] + " " + year[x]);
+        }
+    }
+};
 
 Car.make.push('Toyota');
 Car.model.push('Corolla');
@@ -55,7 +59,7 @@ Car.make.push('Honda');
 Car.model.push('Accord');
 Car.year.push(2020);
 
-console.log(Car);
+Car.showCars();
 
 
 
@@ -133,7 +137,8 @@ console.log(Car);
 // // // inheritance
 // class Employee extends Person {
 //     constructor(name, age, company = "Jump") {
-//         super(name, age);
+//         super(name, age);     ------------------> The special word super is used for accessing and call functions of the object's parent
+//                                                  In this case, it's accessing the Person
 //         this.company = "Jump";
 //     }
 // }
