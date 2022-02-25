@@ -1,0 +1,56 @@
+*,
+ :after,
+ :before {
+    box-sizing: border-box;
+}
+
+.declaration {
+    align-items: center;
+    border-bottom: 2px solid blue rgb(0, 105, 255);
+    display: flex;
+    margin: 0px 8px;
+    padding: 2px 8px 0px;
+}
+
+.topNavigation {
+    display: flex;
+    padding-top: 0%;
+    padding-right: 32px;
+    padding-bottom: 0%;
+    padding-left: 32px;
+    position: relative;
+    width: 100%;
+    z-index: 15;
+}
+
+.nav1 {
+    display: flex;
+}
+
+.menuBar {
+    position: fixed;
+    top: auto;
+    right: 0;
+    left: 0;
+    z-index: 9998;
+    overflow: auto;
+    background-color: black;
+}
+
+.bar_holder_1 {
+    flex-wrap: nowrap;
+    overflow: auto;
+}
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+}
+
+.contact-us {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-item {}
