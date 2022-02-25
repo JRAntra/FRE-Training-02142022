@@ -4,7 +4,7 @@ Array.prototype.myReduce = function (callback, initial) {
   let acc = this[0];
 
   if (typeof initial == "undefined") {
-    this.forEach((num, i, array) => {
+    this.slice(1).forEach((num, i, array) => {
       acc = callback(acc, num, i, array);
     });
   } else {
@@ -15,5 +15,7 @@ Array.prototype.myReduce = function (callback, initial) {
   }
   return acc;
 };
-console.log(arr.myReduce((acc, num, i, array) => acc + num, 8));
-console.log(str.split("").myReduce((acc, num, i, array) => acc + num + num));
+console.log(arr.myReduce((acc, num, i, array) => acc + num));
+console.log(
+  str.split("").myReduce((acc, num, i, array) => acc + num + num, "")
+);
