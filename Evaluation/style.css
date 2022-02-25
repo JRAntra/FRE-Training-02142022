@@ -1,0 +1,135 @@
+:root{
+    --height-header:60px;
+
+    --height-todolist:300px;
+    --height-todolist-header:30px;
+
+    --width-todolist:400px;
+
+    --color-purple: rgb(131, 51, 155);
+    --color-orange-button: rgb(201, 98, 39);
+    --color-green-li-hover:green;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: green;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Shizuru', cursive;
+}
+.header{
+    background:linear-gradient(to right, black, var(--color-purple));
+    width: 100%;
+    height:var(--height-header);
+    color: white;
+    font-size:2rem;
+    padding-left: 20px;
+    text-transform: capitalize;
+    letter-spacing:1px;
+}
+
+.slideshow-container {
+    display: flex;
+    max-width: 100px;
+    position: relative;
+    margin: auto;
+  }
+  
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+ 
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+
+ 
+  
+  
+  
+  
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  
+  
+
+
+
+
+  /* img {
+        height: 320px;
+        width: 216px;
+    }
+    
+    p {
+        font-size: 10px;
+        margin: 0;
+    }
+    
+    #myData{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .movie-container{
+    margin: 5px;
+    } */
