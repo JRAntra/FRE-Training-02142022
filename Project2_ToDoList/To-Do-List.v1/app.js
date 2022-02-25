@@ -1,4 +1,4 @@
-
+// ~~~~~~~~~~~~ API fetch ~~~~~~~~~~~~
 // Fetch to-do list from API
 async function Api() {
     let response = await fetch('https://jsonplaceholder.typicode.com/todos/');
