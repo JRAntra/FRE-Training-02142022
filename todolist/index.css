@@ -1,0 +1,115 @@
+:root {
+  --height-header: 60px;
+
+  --height-todolist: 300px;
+  --height-todolist-header: 30px;
+
+  --width-todolist: 400px;
+
+  --color-green: rgb(30, 255, 0);
+  --color-red-button: rgb(187, 9, 9);
+  --color-green-li-hover: rgb(27, 172, 8);
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lobster", cursive;
+}
+
+.header {
+  height: var(--height-header);
+  line-height: var(--height-header);
+  width: 100%;
+  color: white;
+  background: linear-gradient(to right, black, var(--color-green));
+
+  font-size: 2rem;
+  padding-left: 10px;
+
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.container {
+  background-color: beige;
+  height: calc(100% - var(--height-header));
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todolist {
+  height: var(--height-todolist);
+  width: var(--width-todolist);
+  background-color: var(--color-green);
+
+  box-shadow: 5px 5px 2px black;
+  border-radius: 5px;
+}
+
+.todolist-header,
+.todolist-input,
+ul li {
+  height: var(--height-todolist-header);
+  line-height: var(--height-todolist-header);
+  width: 100%;
+
+  padding-left: 10px;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+
+  border: none;
+  outline: none;
+
+  list-style: none;
+}
+.todolist-header {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+ul li:hover {
+  background-color: var(--color-green-li-hover);
+}
+
+ul li span {
+  height: 100%;
+  line-height: var(--height-todolist-header);
+  overflow: hidden;
+}
+
+ul li button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-red-button);
+}
+ul li button:hover {
+  font-size: 1.7rem;
+}
+ul li button:active {
+  font-size: 1.3rem;
+}
+
+ul {
+  height: calc(var(--height-todolist) - var(--height-todolist-header) * 2);
+  overflow: auto;
+}
