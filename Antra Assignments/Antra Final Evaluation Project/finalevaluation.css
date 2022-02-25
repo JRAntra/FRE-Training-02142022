@@ -1,0 +1,35 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100vw;
+    height:100vh;
+}
+
+h1{
+    text-align:center;
+}
+
+.movie__cont{
+    margin:0 auto;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    width:50%;
+    max-width:2000px;
+    border:2px solid black;
+}
+
+.movie__box{
+    height:10rem;
+    width:80%;
+}
+
+
+
+
