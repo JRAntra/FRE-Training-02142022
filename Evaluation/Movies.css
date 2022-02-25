@@ -1,0 +1,25 @@
+body{
+    background-color: grey;
+    padding-top: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#movie_container{
+    display:flex;
+    background-color: green;
+    height: 600px;
+}
+
+
+#slot{
+    flex-grow: 2;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+.button_sec{
+    flex-grow: 1;
+    background-color: antiquewhite;
+}
