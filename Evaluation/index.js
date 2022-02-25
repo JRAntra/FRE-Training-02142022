@@ -90,6 +90,7 @@ const Controller = ((model, view) => {
             }
             else if(x == 0){
                 document.getElementsById("btn").style.display = "none";
+                //try to not show the btn at the most left position but have error
             }
             
         });
@@ -111,7 +112,8 @@ const Controller = ((model, view) => {
                 });
             }
             if(y == 9){
-                
+                document.getElementsById("btn").style.display = "none";
+                //try to not show the btn at the most right position but have error
             }
         });
     }
