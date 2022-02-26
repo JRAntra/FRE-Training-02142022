@@ -44,6 +44,7 @@ ul.row {
   border: 0;
   cursor: pointer;
   z-index: 10;
+  border-radius: 50%;
 }
 
 .card__prev {
@@ -104,7 +105,7 @@ img {
     width: 500px;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 761px) {
   .card__prev {
     left: 0;
   }
