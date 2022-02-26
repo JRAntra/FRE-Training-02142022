@@ -20,12 +20,17 @@ body {
 }
 
 ul.row {
-  width: 1050px;
+  width: 1010px;
   height: 100%;
   overflow: scroll;
+  overflow-y: hidden;
   list-style: none;
   position: relative;
   transition: all ease 0.5s;
+}
+
+.row::-webkit-scrollbar {
+  display: none;
 }
 
 #data-panel {

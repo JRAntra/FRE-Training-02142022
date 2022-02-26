@@ -2,7 +2,7 @@ const movies = [];
 const dataPanel = document.querySelector("#data-panel");
 const prevButton = document.querySelector(".card__prev");
 const nextButton = document.querySelector(".card__next");
-const scrollPerClick = 250;
+const scrollPerClick = 260;
 const movieCard = document.querySelector(".row");
 showData();
 
