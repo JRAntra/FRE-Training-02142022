@@ -93,3 +93,25 @@ img {
   letter-spacing: 1px;
   margin-top: 5px;
 }
+@media screen and (max-width: 1413px) {
+  .card__prev {
+    left: 75px;
+  }
+  .card__next {
+    right: 75px;
+  }
+  ul.row {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .card__prev {
+    left: 0;
+  }
+  .card__next {
+    right: 0;
+  }
+  ul.row {
+    width: 250px;
+  }
+}
