@@ -1,0 +1,87 @@
+External CSS - using link tag inside the head tag (lowest priority) - based on priority in the header
+Style Tag - using <style> tag inside the head tag (mid priority) - based on priority in the header
+Inline Attribute - Using inline attribute such as <div style="color:red"> (highest Priority)
+
+but the sequence of the styles that are rendered matter. This is based on Priority and Specificity
+
+Pseudo Elements and Classes
+
+pseudo classes starts with a single colon while elements starts with a double colon
+
+ex. div:hover - pseudo class
+    div::before - pseudo element
+    
+CSS Reset
+
+ex. 
+*, *::before, *::after{
+    padding: 0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+* - the asterisk is a selector which selects all (elements). It is also called Universal Selector
+
+box-sizing sets how the total width and height of an element is calculated.
+
+CSS Normalization
+Similar to CSS Reset, but it adheres to the different kinds of browsers due to their specifications. CSS Reset is the superset of CSS Normalization 
+
+CSS Selectors
+
+id - has the highest priority in an external css file
+
+class - is the second priotity in an external css file
+
+element - is the leat priority in an external css file
+
+attribute selector such as this example:
+
+div[class^='con']{
+    background-color:green
+}
+
+this attribute selector is based on the color green who's class starts with the name 'con'
+
+^= - Attribute Selector
+
+Pseudo seletor - This interacts with the pseudo class. Example:
+
+:root{
+    
+}
+
+Child Selector Combinator Example
+
+.container > p - selects the immediate child of the parent
+
+Descendant Selector - Selects all the child of the parent element. Example
+
+.container > p - Selects all of the children within the parent element. In this case, any p element within the container calss will be selected
+
+Margin Collapsing
+
+
+CSS Positions
+
+Static
+Relative - relative to its point of origin
+Absolute - Normal Document Low/Flow Layout
+            It will be extracted from the original place related to the first anchor tag which is the parent of element. Will be removed from the flow of the document. It will be find its anchor.
+fixed - it's fixed on the viewport
+sticky - returns to its normal document flow, but when the page is
+          scrolled the element sticks to the top or bottom.
+inherit - Inherits the position of the
+            the parent element.
+            
+z-index - it only works in positioned
+            elements other than static
+            
+Flexbox
+
+It is a 1 dimensional CSS Layout, but can be used to become 2 dimensional
+
+Assignment Discussion
+
+<input type="submit"> - does not permit content
+<button> - open/close tag. Does permit content

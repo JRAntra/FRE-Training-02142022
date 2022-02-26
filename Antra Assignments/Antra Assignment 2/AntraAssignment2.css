@@ -1,0 +1,185 @@
+/*CSS Reset*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+:root{
+    --navBackground:#000;
+    --titleBackgroundColor:#c6bfbf;
+    --fontColor:#000;
+    --footerColor:#0b4d14;
+    --textColor:white;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    padding:0;
+    margin:0;
+    
+}
+
+
+
+.body__nav{
+    width:100vw;
+    background-color:var(--navBackground);
+    padding:0.5em 0;
+    position:fixed;
+    box-sizing:border-box;
+    margin:0;
+}
+
+.body__nav ul{
+    list-style-type:none;
+    display:flex;
+    width:50%;
+    max-width:700px;
+    margin:0;
+}
+
+.body__nav ul li{
+    height:2em;
+    width:10em;
+    padding:1em;
+    text-align: center;
+}
+
+.body__nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+.to--center{
+    margin:0 auto;
+    width:80%;
+    max-width:1500px;
+}
+
+.main__header{
+    display:flex;
+    flex-direction:column;
+    margin:0;
+    padding:10em 0;
+    background:var(--titleBackgroundColor);
+    box-sizing:border-box;
+}
+
+.main__header h1{
+    font-size:5em;
+}
+
+
+main{
+    margin:0;
+    padding:0;
+}
+
+
+
+
+.main__para{
+    padding:5em 0em;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    column-gap:2em;
+}
+
+footer{
+    width:100vw;    
+    position:absolute;
+    bottom:0;
+    margin:0;
+    padding:10px 0;
+    display:flex;
+    background-color:var(--footerColor);
+}
+
+.footer__div{
+    width:50%;
+}
+
+.footer__ul{
+    display:flex;
+    flex-direction:row;
+    width:50%;
+    max-width:500px;
+    padding:10px;
+    list-style-type:none;
+    margin:0 auto;
+}
+
+.footer__ul li{
+    padding:0 3em;
+    height:2em;
+    width:20em;
+    padding:0.5em;
+    text-align:center;
+}
+
+.footer__ul li a{
+    color:var(--textColor);
+    text-decoration:none;
+}
+
+@media (max-width:700px){
+    .main__para{
+        display:flex;
+        flex-flow:column;
+    }
+    
+    .main__para p{
+        padding:2em 0;
+    }
+    
+    body{
+        display:block;
+    }
+    
+    footer{
+        position:static;
+        display:flex;
+        flex-flow:column;
+        width:100vw;
+    }
+    
+    .footer__ul{
+        width:80%;
+        margin:0 auto;
+    }
+}
+
+
+/*Lessons Learned
+
+Do not apply padding left and right for
+elements that have full viewport widths.
+It will create disruption between the spacing edges of the element relative to the side of the viewport
+
+*/
+
+
+
+
+
+

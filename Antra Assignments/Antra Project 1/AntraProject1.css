@@ -1,0 +1,184 @@
+:root{
+    --shadow:#a6c8ff;
+    --links:#0040a8;
+    --text: 'Hind Siliguri', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:var(--text);
+    padding:0;
+    margin:0;
+}
+
+nav{
+    width:100vw;
+    padding:0;
+    margin:0;
+    background-color:cadetblue;
+    box-shadow:1px 1px 10px rgba(227, 227, 227, 0.5);
+}
+
+.nav__sec{
+    width:100%;
+    max-width:1500px;
+    padding:0;
+    margin:0 auto;
+    display:flex;
+    flex-flow:row;
+}
+
+
+.sec__cont__nav{
+    width:50%;
+    text-align:center;
+    padding:1em;
+    margin:0 auto;
+    font-size:20px;
+}
+
+.sec__cont__nav:hover{
+    background-color:black;
+    border-radius:5px;
+    text-decoration:underline 4px white;
+}
+
+.nav__sec a{
+    color:white;
+    text-decoration:none;
+    letter-spacing:2px;
+}
+
+#search-box{
+    background-color:white;    
+}
+
+#search{
+    height:30px;
+    width:30px;
+}
+
+
+main{
+    width:80%;
+    max-width:1500px;
+    padding:0;
+    margin:0 auto;
+    background-color:rgba(227, 227, 227, 0.1); 
+}
+
+
+
+.main__sec{
+    width:100%;
+    max-width:1000px;
+    display:flex;
+    flex-direction:row;
+    padding:0;
+    margin:0 auto;    
+}
+
+.sec__tile{
+    background-color:white;
+    width:100%;
+    padding:2em 0.5em;
+    margin:2em 0.5em;
+    box-shadow:1px 1px 5px var(--shadow);
+}
+
+.date{
+    color:grey;
+    font-style:italic;
+    font-size:13px;
+}
+
+.sec__tile h2{
+    font-size:3em;
+    font-weight:bolder;
+    padding:0;
+    margin:0
+}
+
+.sec__tile p{
+    padding-bottom:5px;
+    margin:0;
+}
+
+.tile__link{
+    text-decoration:none;
+    color:blue;
+}
+
+footer{
+    width:100vw;
+    box-shadow:-1px -1px 10px rgba(227, 227, 227, 0.5);
+    padding:0;
+    margin:0;
+}
+
+.footer__div--center{
+    width:50%;
+    max-width:500px;
+    margin:0 auto;
+    text-align:center;
+    padding:0.4em;
+}
+
+.footer__div--center p{
+    padding:0.4em 0;    
+}
+
+.h5--green{
+    color:green;
+}
+
+.h5--blue{
+    color:blue;
+}
+
+@media (max-width:900px){
+    .nav__sec{
+        display:flex;
+        flex-flow:column;
+        width:100%;
+        padding:0;
+        margin:0;
+    }  
+    
+    .sec__cont__nav{
+        margin:0 auto;
+        padding:0.4em 0;
+        height:3em;
+        width:100%;
+        border:0.5px solid lightslategrey;
+    }
+    
+    #search{
+        width:20px;
+        height:20px;
+    }
+    
+    main{
+        width:100%;
+    }
+    .main__sec{
+        flex-flow:column;
+    }
+    
+    .sec__tile{
+        width:90%;
+        margin:1em auto;
+    }
+    
+    footer{
+        position:static;
+    }
+}
+
+
+
+
+

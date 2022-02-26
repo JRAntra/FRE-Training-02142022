@@ -1,0 +1,95 @@
+Bootstrap
+
+Bootstrap is a third-party technology which provides context in making the website structured and responsive
+
+Bootstrap Containers/Grid
+Example:
+
+<div class="col-md-6"></div>
+
+Flex Containers
+Flex Containers usually arrange the items into a row.
+
+flex-wrap:wrap - overflowed contents are transfered to the next line
+
+Setting Width with Media queries
+
+@media (max-width:576px){
+    .col-12{
+        width: calc(12/12 *100%);
+    }
+
+    .col-6{
+        width: calc(6/12 *100%);
+    }
+}
+
+@media (min-width:576px) and (max-width: 768){
+    .col-sm-4{
+        width: calc(4/12 * 100%);
+    }
+    .col-sm-5{
+        width: calc(5/12 * 100%);
+    }
+    .col-sm-7{
+        width: calc(7/12 * 100%);
+    }
+    .col-sm-8{
+        width: calc(8/12 * 100%);
+    }
+}
+
+Responsive Design
+
+*Units
+
+Pecentages - a unit relative to the enclosing parent
+
+em - unit relative to the parent but is usually relative to its font-size. If we use em to display takes the relative unit of itself
+
+rem - unit relative to the parent but is usually relative to the root element's font-size which is HTML
+
+Mobile vs. Desktop
+
+Mobile First - You're expected to develop a software/webpage that will comply to mobile screens. It's a more functional approach which caters to mobile audience. This focuses in content-first.
+
+Desktop First - Traditional, office audience. We can more features in a desktop application compared to mobile, feature-rich.
+
+BEM Naming Methodology or Model
+
+Block__Element--Modifier - a naming convention which adheres to proper namin and concise relation of elements and its classes or IDs.
+
+Javascript
+
+Primitive Data Types
+- number
+- undefined - it is undefined
+- string
+- boolean
+- null (it is the base of all object. it is a type of object)
+- symbol
+- bigint
+
+primitive data types cannot contain method and functions
+
+Basic Data Types
+let
+const 
+var
+
+Passing by value - we are making a copy memory of the actual parameters value. This is relative to primitive data type.
+
+Javascript Equality
+
+'=='
+Coercion - converts the value of a string to a number data type or the like
+
+'==='
+strict equality compares the two values based on data types
+
+Truthy and Falsy
+
+Truthy is a value considered true when it's put in a boolean
+
+Falsy is a value considrered false to be a put in a boolean
+-falsy:0, -0, 0n, empty strings('', "", ``), null, undefined, Not a Number (NaN), document.all (this is an object while objects usually are not a falsy)

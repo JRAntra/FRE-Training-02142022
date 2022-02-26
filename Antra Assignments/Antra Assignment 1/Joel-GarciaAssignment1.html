@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link type="text/css" rel="stylesheet" href="Joel-GarciaAssignment1.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+        
+
+        <!--<script defer></script>
+            
+            The best practice is to put the script in the heder with the word 'defer'.
+            it will execute the JS file once the DOM is ready. Defer also running the script
+        
+        <script async></script>
+            Async syncs the scrypt asynchronously
+        -->
+        <!--Meta tags are for infromation of html document to be parsed by the browser-->
+    </head>
+    <body>
+        
+        <form action="#">
+            <h1>Sign Up</h1>
+            
+            
+            <div class="content" id="name">
+                <div class="content__div">
+                    <input  class="content__div__input " type="text" id="first-name" name="first-name" placeholder="First Name*" required>
+                </div>                
+
+                <div class="content__div">
+                    <input  class="content__div__input" type="text" id="last-name" name="last-name" placeholder="Last Name*" required>
+                </div>
+                
+            </div>
+
+            <br>
+
+            <div class="content">
+                <div class="content__div">
+                    <input class="content__div__input" type="tel" id="mobile" name="mobile" placeholder="Mobile no.">
+                </div>        
+            </div>
+                
+            <div class="content">
+                <div class="content__div">
+                    <input class="content__div__input" type="email" id="email" name="email" placeholder="Email Address">  
+                </div>           
+            </div>
+            
+            <br>
+            
+            <div class="content">
+                <div class="content__div">
+                    <input  class="content__div__input" type="password" id="user-password" name="user-password" placeholder="Password*" required>                 
+                </div> 
+                
+                <div class="content__div">
+                    <input  class="content__div__input" type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password*" required>
+                </div>                
+            </div>
+
+            <div class="content">
+                <div class="content__div">
+                    <div class="agree__box">
+                        <input class="content__div__input" type="checkbox" id="agree" name="agree" required>
+                        <label for="agree">Agree</label>
+                    </div>
+                </div> 
+                
+                <div class="content__div">
+                    <p>By clicking register, you agree to the <a id="terms-conditions" href="#">Terms and Conditions</a> set out by this site, including our Cookie Use.</p>
+                </div>                
+            </div>
+                        
+            <div class="content">
+                <div class="content__div">
+                    <button class="content__div__button" type="submit" id="register" name="register">Register</button>
+                </div> 
+                
+                <div class="content__div">
+                    <button class="content__div__button" type="submit" id="sign-in" name="sign-in">Sign In</button>
+                </div>
+                
+            </div>         
+            
+        </form>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+Antra Training Session Day 1
+
+HTTP and HTTPS
+
+DNS and DNS Lookup (Domain Name Systems)
+ - Domain Name System is necessary to access the website. It is like a phone book of the internet
+ - URL (Universal Resource Locator). URLs to look for the website.
+ 
+HTTP/S Request
+ - Typing the website name in the URL sends a get request to the DNS
+ - HTTP/S (Hypertext Transfer Protocol/Secure)
+ - Status Code - 200 means that everything is fine
+ 
+ - Stateless Protocol (For One Time Communication)
+ 
+ 
+Request Headers
+cookies - a long string which contain information to communicate the client to the server
+
+Cookie v.s. Local Storage
+- Difference:
+    > Size: Cookies is not a big file
+            Cookies can be manipulated by Javascript
+    >Storage (Local and Session):
+            Local Storage: can be controlled and selected by Javascript. It has a specific data structure.
+                           can only be accessed by the browser. we can access it also using a cookie
+            Session Storage: session storage is only temporary
+
+Response
+- DOM: Document Object Model
+- CSSOM: Cascading Style Sheet Object Model
+
+CRUD - Create, Remove, Update, Delete
+
+Common Method
+Get - Fetching Information/ size is limited when used to create something. It is not a good practice. This is         not secure for it will show the URL.
+Delete - Deletes things
+Put - Updates the entire object in the database
+Post - Creating something new. Create Resources
+Patch - Not common, but it like put and specifically update a certain data
+
+Best Practices of CRUD
+
+Status Code
+- They are sent by the server. Status code 404 does not mean that the page does not exists, but it is not         inclined to provide the user what the user wants to see (i.e. 404, 403, 400, 500, 200 (everything is good))
+- If the URL is giberrish, it would not show a status code
+
+HTML
+i18n - Internalization - Support the needs to enable localization. It is a superset above localization
+l10n - Localization - geared towards a specific language, culture, and features
+g11n - globalization
+L12y - localizability
+
+Defer v.s. Async (calling a script file in javascript)
+
+The best practice is to put the script in the heder with the word 'defer'.
+it will execute the JS file once the DOM is ready. Defer also running the script
+        
+<script async></script>
+Async syncs the scrypt asynchronously
+
+Javascript is for WEB API
+NODE JS ECMA Script - Node API
+
+Semantic HTML - is for accessibility. The way impaired users to access the website. more tailored
+                to the blind
+
+ARIA Attributes
+
+Assignment for Day 1

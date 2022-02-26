@@ -1,0 +1,66 @@
+html,
+body{
+    height:100vh;
+    width:100vw;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+header{
+    width:100%;
+    margin:0;
+    padding:1.5rem 0;
+    
+}
+
+.header__title{
+    width:500px;
+    margin:0 auto;
+    text-align: center;
+}
+
+section{
+    display:flex;
+    width:100%;
+    justify-content:center;
+    align-content:center;
+    padding: 5rem 0;
+}
+
+.section__cont{
+    width:80%;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.section__cont h2{
+    text-align:center;
+}
+
+ul{
+    width:80%;
+    border:1px solid black;
+    margin:0 auto;
+    display:flex;
+    
+    list-style-type:none;
+}
+
+ul li{
+    padding-left:1em;
+    padding-top:0.5em;
+    margin-right:10px;
+    height:3rem;
+    width:100%;
+    border:1px solid blue;
+}
+
+ul button{
+    height:3rem;
+    width:20%;
+    
+}
