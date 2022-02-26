@@ -8,34 +8,40 @@ async function Api() {
     return data;
 }
 
-//~~~~~~~~~ Model ~~~~~~~~~~
 
 // fake DB with movies information
 let movies = await Api();
 
-// Divide movies into 4 each
-let batchArr = [];
-let batch = [];
+//~~~~~~~~~ Model ~~~~~~~~~~
+const Model = () => {
+
+    // Divide movies into batch of 4 movies
+    let batchArr = [];
+    let batch = [];
+    
+    movies.forEach((movie, index) => {
+        // divide movies into 4 each
+        if (index !== 0 && index % 4 === 0) {
+            batchArr.push(batch);
+            batch = [];
+        } 
+        
+        batch.push(movie);
+
+        if (index === movies.length - 1) {
+            batchArr.push(batch);
+        }
+    });
+    return batchArr;
+}
+
+let batchArr = Model(movies);
+// shows a batch number of a current page.
 let currentBatch = 0;
-movies.forEach((movie, index) => {
-    
-    // divide movies into 4 each
-    if (index !== 0 && index % 4 === 0) {
-        batchArr.push(batch);
-        batch = [];
-    } 
-    
-    batch.push(movie);
-
-    if (index === movies.length - 1) {
-        batchArr.push(batch);
-    }
-});
-
 
 // ~~~~~~~~~~~ View ~~~~~~~~~~~~~
 
-const View = (movies) => {  
+const View = (movies, batchArr) => {  
     
     // Render page
     if (movies.length < 4) {
@@ -51,11 +57,10 @@ const View = (movies) => {
             let movieList = document.querySelector('.movies__container');
             let section = movieList.children.item(i);
             section.innerHTML = `
-            <img src="${movies[i].imgUrl} onerror="this.onerror=null;this.src='https://demofree.sirv.com/nope-not-here.jpg';" alt="${movies[i].name}">
+            <img src="${movies[i].imgUrl}" onerror="this.src='./img/No-image-found.jpg'" alt="${movies[i].name}">
             <h3>${movies[i].name}</h3>
             <p>${movies[i].outlineInfo}</p>
             `;
-            console.log(currentBatch);
         }
     } else {
 
@@ -63,11 +68,10 @@ const View = (movies) => {
             let movieList = document.querySelector('.movies__container');
             let section = movieList.children.item(i);
             section.innerHTML = `
-            <img class="" src="${movies[i].imgUrl}" alt="${movies[i].name}">
+            <img src="${movies[i].imgUrl}" onerror="this.src='./img/No-image-found.jpg'" alt="${movies[i].name}">
             <h3>${movies[i].name}</h3>
             <p>${movies[i].outlineInfo}</p>
             `;
-            console.log(currentBatch);
         }
     }
 
@@ -96,17 +100,16 @@ const Controller = () => {
 
 
     nextBtn.addEventListener('click', () => {
-        console.log('jdaklfja')
         currentBatch++;
         View(batchArr[currentBatch]);
 
     });
     prevBtn.addEventListener('click', () => {
-        console.log('jdaklfja')
         currentBatch--;
         View(batchArr[currentBatch]);
     });
 }
 Controller();
+
 View(batchArr[currentBatch]);
 
