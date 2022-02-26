@@ -2,11 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid black; */
 }
 
 html,
 body {
   height: 100%;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 }
 
 .container {
@@ -18,9 +20,9 @@ body {
 }
 
 ul.row {
-  width: 1030px;
+  width: 1050px;
   height: 100%;
-  overflow: hidden;
+  overflow: scroll;
   list-style: none;
   position: relative;
   transition: all ease 0.5s;
@@ -36,20 +38,21 @@ ul.row {
   transform: translateY(-50%);
   border: 0;
   cursor: pointer;
+  z-index: 10;
 }
 
 .card__prev {
   width: 50px;
   height: 50px;
   color: blueviolet;
-  left: 350px;
+  left: 50px;
 }
 
 .card__next {
   width: 50px;
   height: 50px;
   color: blueviolet;
-  right: 350px;
+  right: 50px;
 }
 
 .movie__card {
