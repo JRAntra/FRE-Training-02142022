@@ -20,6 +20,19 @@ body{
 
 
 .button_sec{
-    flex-grow: 1;
-    background-color: antiquewhite;
+    flex-grow: 0.1;
+    background-color: gray;
+    padding-top: 250px;
+}
+
+
+#left_button{
+    height: 50px;
+    width: 50px;
+}
+
+
+#right_button{
+    height: 50px;
+    width: 50px;
 }

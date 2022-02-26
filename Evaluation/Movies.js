@@ -1,3 +1,4 @@
+but_status = {left_button:0, right_button:3};
 
 function getList(){
     const baseUrl = "http://localhost:3000";
@@ -8,8 +9,16 @@ function getList(){
 
 
 function render(start, end, movieList){
-    let tmp = "";
+    let tmp = '';
+    let id = "";
 
+    if (but_status.left_button == 0){
+        id = "hidden = hidden";
+    }
+
+    tmp = `<div class="button_sec"><button onclick = leftClick() type ="button" id = "left_button" ${id}><</button></div>`;
+
+    id = "";
     for(let i=start; i< end; i++){
         tmp += `
         <div id="slot">
@@ -19,12 +28,38 @@ function render(start, end, movieList){
         </div>
         `;     
     }
-    let word = document.querySelectorAll("movie_container");
-    console.log(word);
+
+    if(but_status.right_button >= movieList.length-1){
+        id = "hidden = hidden";
+    }
+
+    tmp += `<div class="button_sec"><button onclick = rightClick() type ="button" id = "right_button" ${id}>></button></div>`;
+
     document.getElementById("movie_container").innerHTML = tmp;
+}
+
+function rightClick(){
+    getList().then((data) => {
+        if(but_status.right_button + 1  < data.length){
+            but_status.right_button += 1;
+            but_status.left_button += 1;
+            render(but_status.left_button, but_status.right_button, data);
+        }
+    });
+}
+
+function leftClick(){
+    getList().then((data) => {
+        if(but_status.left_button - 1  >= 0){
+            but_status.right_button -= 1;
+            but_status.left_button -= 1;
+            render(but_status.left_button, but_status.right_button, data);
+        }
+    });
 }
 
 
 getList().then((data) => {
     render(0,3,data);
 });
+
