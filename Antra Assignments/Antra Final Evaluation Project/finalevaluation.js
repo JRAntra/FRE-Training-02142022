@@ -42,8 +42,13 @@ const getMovies = () => {
 
 getMovies();
 
+document.getElementById("previous").addEventListener("click", () => {
+    document.getElementById("movie__cont").scrollLeft -= 500;
+});
 
-
+document.getElementById("next").addEventListener("click", () => {
+    document.getElementById("movie__cont").scrollLeft += 500;
+})
 
 
 

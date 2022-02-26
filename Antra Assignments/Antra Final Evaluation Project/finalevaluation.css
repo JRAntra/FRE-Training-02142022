@@ -8,10 +8,17 @@ html,
 body{
     width:100vw;
     height:100vh;
+    font-family:'Inter', sans-serif;
+    align-items:center;
+    display:flex;
 }
 
+
 h1{
+    padding: 1em 0;
     text-align:center;
+    letter-spacing:2px;
+
 }
 
 .container{
@@ -19,22 +26,47 @@ h1{
     margin:0;
     padding:0;
     position:fixed;
-    transform:translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
     
 }
 
-#movie__cont{
+.movie__box--outer{
     margin:0 auto;
     padding:0;
+    width:93%;
     display:flex;
-    overflow:auto;
-    justify-content:center;
-    align-content:center;
-    width:100%;
-    border:2px solid black;
+    flex-flow:row;
+    align-items:center;
 }
+
+#movie__cont{
+    display:flex;
+    flex-flow:row;
+    margin:0 auto;
+    overflow:auto;
+    padding:1em;
+    width:100%;
+    scroll-behavior: smooth;
+}
+
+a{
+    margin:0;
+    padding:1em;
+    width:5em;
+}
+
+i{
+    height:5em;
+    width:5em;
+}
+
+
+
+
+
+
+
+
+
 
 
 
