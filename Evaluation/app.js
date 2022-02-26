@@ -2,7 +2,7 @@ const movies = [];
 const dataPanel = document.querySelector("#data-panel");
 const prevButton = document.querySelector(".card__prev");
 const nextButton = document.querySelector(".card__next");
-const scrollPerClick = 260;
+const scrollPerClick = 258;
 const movieCard = document.querySelector(".row");
 showData();
 
@@ -35,20 +35,26 @@ async function showData() {
 }
 
 let scrollAmount = 0;
-
+prevButton.style.display = "none";
 nextButton.addEventListener("click", (e) => {
+  prevButton.style.display = "initial";
   movieCard.scrollTo({
     left: (scrollAmount += scrollPerClick),
     behavior: "smooth",
   });
+  if (scrollAmount > scrollPerClick * 4) {
+    nextButton.style.display = "none";
+  }
 });
 
 prevButton.addEventListener("click", (e) => {
+  nextButton.style.display = "initial";
   movieCard.scrollTo({
     left: (scrollAmount -= scrollPerClick),
     behavior: "smooth",
   });
-  if (scrollAmount < 0) {
+  if (scrollAmount < 20) {
     scrollAmount = 0;
+    prevButton.style.display = "none";
   }
 });

@@ -50,14 +50,14 @@ ul.row {
   width: 50px;
   height: 50px;
   color: blueviolet;
-  left: 50px;
+  left: 150px;
 }
 
 .card__next {
   width: 50px;
   height: 50px;
   color: blueviolet;
-  right: 50px;
+  right: 150px;
 }
 
 .movie__card {
@@ -65,13 +65,16 @@ ul.row {
   width: 100%;
   padding: 10px;
   margin: 10px;
-  transition: transform 300ms;
   position: relative;
   top: 20vh;
 }
+.movie__card img {
+  transition: transform 300ms;
+  border-radius: 30px;
+}
 
-.movie__card:hover {
-  transform: scale(1.1);
+.movie__card img:hover {
+  transform: scale(1.2);
   cursor: pointer;
 }
 
@@ -82,9 +85,11 @@ img {
 .card__info {
   margin-top: 2px;
   padding: 1px;
+  letter-spacing: 1px;
 }
 
 .card__title {
   color: blue;
   letter-spacing: 1px;
+  margin-top: 5px;
 }
