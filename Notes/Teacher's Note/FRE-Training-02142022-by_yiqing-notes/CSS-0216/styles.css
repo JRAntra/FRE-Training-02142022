@@ -1,0 +1,58 @@
+div {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  margin: 10px;
+  /* border: 10px solid black; */
+  background-color: red;
+  box-sizing: border-box;
+}
+
+#my-container {
+  margin: 30px;
+}
+
+/* div:hover {
+  background-color: brown;
+} */
+
+/* p::before {
+  content: 'This is a new element--';
+}
+
+p::after {
+  content: '--This is the end';
+} */
+
+/* *,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* .container {
+  background-color: blueviolet;
+} */
+
+/* #my-container {
+  background-color: aquamarine;
+} */
+
+/* .container,
+.concrete-example {
+  background-color: green;
+} */
+
+/* div[class^='con'] {
+  background-color: green;
+} */
+
+/* :root {
+  background-color: yellow;
+} */
+
+/* .container > p {
+  background-color: lightcoral;
+} */
