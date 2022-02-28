@@ -1,11 +1,10 @@
-
 import { Api } from "./api.js";
 // ~~~~~~~~~~~~~View~~~~~~~~~~~~~
 const View = (() => {
     const domstr = {
         movielist: ".movie-container",
-        leftbtn: ".button-left",
-        rightbtn: '.button-right'
+        leftbtn: ".lbtn",
+        rightbtn: '.rbtn'
     };
     const render = (ele, tmp) => {
         ele.innerHTML = tmp;
@@ -43,6 +42,7 @@ const Model = ((api, view) => {
     }
     class State {
         #movielist = [];
+        #wholelist = [];
 
         get movielist() {
             return this.#movielist;
@@ -55,65 +55,60 @@ const Model = ((api, view) => {
             view.render(ele, tmp);
 
         }
+
+        get wholelist(){
+            return this.#wholelist;
+        }
+        set wholelist(newwholelist) {
+            this.#wholelist = newwholelist;
+        }
+
     }
 
     const getMovies = api.getMovies;
-    const rightMovies = api.rightMovies;
-    const leftMovies = api.leftMovies;
 
     return {
         getMovies,
-        rightMovies,
-        leftMovies,
         State,
         Movie
     };
 })(Api, View);
 // ~~~~~~~~~~~~~Controller~~~~~~~~~~~~~
-let x = 0;
-let y = 4;
+
 const Controller = ((model, view) => {
+    let x = 0;
+    let y = 4;
     const state = new model.State();
-    const movielist = document.querySelector(view.domstr.movielist);
 
     const leftMovies = () => {
-
+        const rightbtn = document.querySelector(view.domstr.rightbtn);
         const leftbtn = document.querySelector(view.domstr.leftbtn);
         leftbtn.addEventListener('click', event => {
             if (x >0){
-                model.getMovies().then((movie) => {
-                    x -= 1;
-                    y -= 1;
-                    state.movielist = movie.slice(x,y);
-                    console.log(state.movielist);
-                });
+                rightbtn.style.display = "initial";
+                x--; y--;
+                state.movielist = state.wholelist.slice(x,y);
+                console.log(x);
             }
-            else if(x == 0){
-                document.getElementsById("btn").style.display = "none";
-                //try to not show the btn at the most left position but have error
-            }
-            
+            if(x == 0){
+                leftbtn.style.display = "none";
+            } 
         });
     }
 
     
 
     const rightMovies = () => {
-
+        const leftbtn = document.querySelector(view.domstr.leftbtn);
         const rightbtn = document.querySelector(view.domstr.rightbtn);
         rightbtn.addEventListener('click', event => {
             if (y < 9){
-                x += 1;
-                y += 1;
-                model.getMovies().then((movie) => {
-                    state.movielist = movie.slice(x,y);
-                    console.log(state.movielist);
-                    console.log(x,y);
-                });
+                leftbtn.style.display = "initial";
+                x++; y++;   
+                state.movielist = state.wholelist.slice(x,y);
             }
             if(y == 9){
-                document.getElementsById("btn").style.display = "none";
-                //try to not show the btn at the most right position but have error
+                rightbtn.style.display = "none";
             }
         });
     }
@@ -122,7 +117,8 @@ const Controller = ((model, view) => {
     const init = () => {
         model.getMovies().then((movie) => {
             state.movielist = movie.slice(x,y);
-            console.log(state.movielist);
+            state.wholelist = movie;
+            
         });
     };
 
