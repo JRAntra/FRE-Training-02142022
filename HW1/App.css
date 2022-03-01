@@ -1,0 +1,106 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+}
+
+html {
+  height: 100%;
+  min-width: 500px;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  box-sizing: border-box;
+  height: 50px;
+  min-width: auto;
+  width: 100%;
+  margin: 5px 0;
+  padding: 14px 15px;
+  border: 1px solid #8a8a8a;
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+#sign-up-form {
+  min-width: auto;
+  width: 70%;
+  box-sizing: border-box;
+  padding: 20px;
+  /* background: chocolate; */
+}
+
+#name-section,
+#password-section,
+#buttons-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+#contacts-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#terms-section {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-gap: 2px;
+  align-items: center;
+}
+
+#terms-section input[type="checkbox"] {
+  font-size: small;
+  vertical-align: middle;
+  width: 1em;
+}
+
+#agree-label {
+  font-weight: bold;
+}
+
+#register-style {
+  border-style: solid;
+  border-color: rgb(74, 74, 221);
+  background-color: rgb(74, 74, 221);
+  border-radius: 4px;
+  padding: 1px 7px;
+  color: white;
+}
+#terms-inside-style {
+  color: #9ecaed;
+}
+
+button {
+  padding: 14px 40px;
+  border-radius: 7px;
+  font-size: 16px;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.75;
+}
+
+#register {
+  background: rgb(74, 74, 221);
+  color: white;
+}
+
+#sign-up {
+  background: rgb(41, 199, 133);
+  color: white;
+}

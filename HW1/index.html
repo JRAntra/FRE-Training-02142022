@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./App.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1>Sign Up</h1>
+    </header>
+    <form id="sign-up-form">
+      <section id="name-section">
+        <input id="first-name" type="text" placeholder="First Name" required />
+        <input id="last-name" type="text" placeholder="Last Name" required />
+      </section>
+      <section id="contacts-section">
+        <input id="mobile-num" type="tel" placeholder="Mobile No." />
+        <input id="email" type="email" placeholder="Email Address" required />
+      </section>
+      <section id="password-section">
+        <input id="password" type="password" placeholder="Password" required />
+        <input
+          id="confirm-password"
+          type="password"
+          placeholder="Confirm Password"
+          required
+        />
+      </section>
+      <section id="terms-section">
+        <label id="agree-label">
+          <input type="checkbox" id="checkbox" />
+          I Agree
+        </label>
+        <p>
+          By clicking
+          <span id="register-style">Register</span>, you agree to the
+          <span id="terms-inside-style">Terms and Conditions</span> set out by
+          this site, including our Cookie Use.
+        </p>
+      </section>
+      <section id="buttons-section">
+        <button id="register">Register</button>
+        <button id="sign-up">Sign Up</button>
+      </section>
+    </form>
+  </body>
+</html>
